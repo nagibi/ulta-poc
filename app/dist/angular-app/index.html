@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<base href="../../../">
+	<meta charset="utf-8" />
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<title>Ultra gás</title>
+	<meta name="description" content="Login page example" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<!--begin::Fonts-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+	<!--end::Fonts-->
+	<!--begin::Page Custom Styles(used by this page)-->
+	<link href="assets/css/pages/login/login-3.css" rel="stylesheet" type="text/css" />
+	<!--end::Page Custom Styles-->
+	<!--begin::Global Theme Styles(used by all pages)-->
+	<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+	<link href="assets/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+	<!--end::Global Theme Styles-->
+	<!--begin::Layout Themes(used by all pages)-->
+	<link href="assets/css/themes/layout/header/base/light.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/themes/layout/header/menu/light.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/themes/layout/brand/dark.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/themes/layout/aside/dark.css" rel="stylesheet" type="text/css" />
+
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+
+	<!--end::Layout Themes-->
+	<link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnfAgMAUaZSg4Eu9V9AKGGD9zcdrbO-CI"></script>
+
+<link rel="stylesheet" href="styles.e8c1bd5bb6fbc246ba79.css"></head>
+
+<body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed page-loading">
+	<app-root></app-root>
+	<script type="text/javascript">
+		$(document).ready(function () {
+
+			// var current = null;
+			var opcaoPrincipal = null;
+			var element = null;
+
+			$(document).on('click', 'body', function (e) {
+
+				var menuLink = $(e.target).closest('a');
+				
+				if (!$('#kt_header').has(e.target).length || ($(menuLink).hasClass('menu-link') && !$(menuLink).hasClass('menu-toggle'))) {
+
+					$(opcaoPrincipal).removeClass('menu-item-open-dropdown menu-item-hover')
+					$(element).removeClass('menu-item-open-dropdown menu-item-hover')
+				}
+
+				if (!$('#kt_quick_user_toggle').has(e.target).length) {
+
+					$('#kt_quick_user').removeClass('offcanvas-on');
+				}
+
+			})
+
+			$('body').on('click', '#kt_quick_user_close', function (e) {
+				
+				$('#kt_quick_user').removeClass('offcanvas-on');
+			});
+
+			$('body').on('click', '#kt_quick_user_toggle', function (e) {
+				
+				$('#kt_quick_user').toggleClass('offcanvas-on');
+			});
+
+			$('body').on('click', '.menu-item-rel', function (e) {
+				e.stopImmediatePropagation;
+
+				// if ($($(e.target).closest('li')).hasClass('menu-item-rel')) {
+					
+					if(opcaoPrincipal!=null) $(opcaoPrincipal).removeClass('menu-item-open-dropdown menu-item-hover')
+
+					opcaoPrincipal = $(e.target).closest('li');
+					$(opcaoPrincipal).toggleClass('menu-item-open-dropdown menu-item-hover')
+				// }
+
+			})
+
+			$('body').on('mouseenter', '.menu-item.menu-item-submenu:not(.menu-item-rel)', function (e) {
+				element = $(e.target).closest('li');
+				$(element).addClass('menu-item-open-dropdown menu-item-hover');
+			});
+
+			$('body').on('mouseleave', '.menu-item.menu-item-submenu:not(.menu-item-rel)', function (e) {
+				element = $(e.target).closest('li');
+				$(element).removeClass('menu-item-open-dropdown menu-item-hover');
+			})
+		});
+
+	</script>
+<script src="runtime-es2015.3356ef6b19e896b5c6c7.js" type="module"></script><script src="runtime-es5.3356ef6b19e896b5c6c7.js" nomodule defer></script><script src="polyfills-es5.c85685eed825b0cef998.js" nomodule defer></script><script src="polyfills-es2015.cd3f605df5e055a1a351.js" type="module"></script><script src="main-es2015.baea605726e5a17424cf.js" type="module"></script><script src="main-es5.baea605726e5a17424cf.js" nomodule defer></script></body>
+
+</html>

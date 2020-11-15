@@ -1,0 +1,1098 @@
+{
+  "MSG000001": {
+    "tipo": "text",
+    "descricao": "Create an account"
+  },
+  "MSG000002": {
+    "tipo": "text",
+    "descricao": "Access"
+  },
+  "MSG000003": {
+    "tipo": "text",
+    "descricao": "Email"
+  },
+  "MSG000005": {
+    "tipo": "text",
+    "descricao": "Email is invalid"
+  },
+  "MSG000006": {
+    "tipo": "text",
+    "descricao": "E-mail is required"
+  },
+  "MSG000007": {
+    "tipo": "text",
+    "descricao": "Recover Password?"
+  },
+  "MSG000008": {
+    "tipo": "text",
+    "descricao": "Password"
+  },
+  "MSG000009": {
+    "tipo": "text",
+    "descricao": "Password is required"
+  },
+  "MSG000010": {
+    "tipo": "text",
+    "descricao": "Password must be {{value}} characters"
+  },
+  "MSG000011": {
+    "tipo": "text",
+    "descricao": "Login"
+  },
+  "MSG000012": {
+    "tipo": "text",
+    "descricao": "Just enter your email address below and we'll send you a link stating your password!"
+  },
+  "MSG000013": {
+    "tipo": "text",
+    "descricao": "Recover Password"
+  },
+  "MSG000014": {
+    "tipo": "text",
+    "descricao": "Cancel"
+  },
+  "MSG000015": {
+    "tipo": "text",
+    "descricao": "Enter information to create your account"
+  },
+  "MSG000016": {
+    "tipo": "text",
+    "descricao": "Register"
+  },
+  "MSG000017": {
+    "tipo": "text",
+    "descricao": "Name"
+  },
+  "MSG000018": {
+    "tipo": "text",
+    "descricao": "Confirm password"
+  },
+  "MSG000019": {
+    "tipo": "text",
+    "descricao": "Confirm your password"
+  },
+  "MSG000020": {
+    "tipo": "text",
+    "descricao": "Confirming your password is required"
+  },
+  "MSG000021": {
+    "tipo": "text",
+    "descricao": "Confirm password must be {{value}} characters"
+  },
+  "MSG000022": {
+    "tipo": "text",
+    "descricao": "Password and confirm password are different"
+  },
+  "MSG000023": {
+    "tipo": "text",
+    "descricao": "I agree with the"
+  },
+  "MSG000024": {
+    "tipo": "text",
+    "descricao": "terms and condition"
+  },
+  "MSG000025": {
+    "tipo": "toast",
+    "descricao": "Login or password invalid!",
+    "tipoInfo": "warning"
+  },
+  "MSG000026": {
+    "tipo": "toast",
+    "descricao": "User logged in",
+    "tipoInfo": "success"
+  },
+  "MSG000027": {
+    "tipo": "text",
+    "descricao": "User logged in"
+  },
+  "MSG000028": {
+    "tipo": "toast",
+    "descricao": "User has not yet confirmed the registration. Please check your email",
+    "tipoInfo": "info",
+    "config": {
+      "timeClose": 0
+    }
+  },
+  "MSG000029": {
+    "tipo": "toast",
+    "descricao": "Expired user",
+    "tipoInfo": "danger"
+  },
+  "MSG000030": {
+    "tipo": "toast",
+    "descricao": "Please confirm your registration! Check your email.",
+    "tipoInfo": "info",
+    "config": {
+      "timeClose": 0
+    }
+  },
+  "MSG000031": {
+    "tipo": "toast",
+    "descricao": "User account locked",
+    "tipoInfo": "danger"
+  },
+  "MSG000032": {
+    "tipo": "toast",
+    "descricao": "Be welcome!",
+    "tipoInfo": "success"
+  },
+  "MSG000033": {
+    "tipo": "text",
+    "descricao": "Close"
+  },
+  "MSG000034": {
+    "tipo": "toast",
+    "descricao": "Check the fields",
+    "tipoInfo": "warning"
+  },
+  "MSG000035": {
+    "tipo": "toast",
+    "descricao": "There is already a registered user with this email!",
+    "tipoInfo": "warning"
+  },
+  "MSG000036": {
+    "tipo": "text",
+    "descricao": "Confirm your registration | Ultragaz"
+  },
+  "MSG000037": {
+    "tipo": "text",
+    "descricao": "Please click this link to"
+  },
+  "MSG000038": {
+    "tipo": "toast",
+    "descricao": "Error registering! Please try again",
+    "tipoInfo": "danger"
+  },
+  "MSG000039": {
+    "tipo": "toast",
+    "descricao": "Registration successful! Check the email to confirm your registration ",
+    "tipoInfo": "success",
+    "config": {
+      "timeClose": 0
+    }
+  },
+  "MSG000040": {
+    "tipo": "toast",
+    "descricao": "Registration confirmed! You can now login.",
+    "tipoInfo": "success",
+    "config": {
+      "timeClose": 0
+    }
+  },
+  "MSG000041": {
+    "tipo": "toast",
+    "descricao": "Token expired or invalid! Register again.",
+    "tipoInfo": "warning",
+    "config": {
+      "timeClose": 0
+    }
+  },
+  "MSG000042": {
+    "tipo": "toast",
+    "descricao": "Invalid email address format",
+    "tipoInfo": "warning"
+  },
+  "MSG000043": {
+    "tipo": "toast",
+    "descricao": "No users registered with the email provided!",
+    "tipoInfo": "warning"
+  },
+  "MSG000044": {
+    "tipo": "toast",
+    "descricao": "The user registered with this login is disabled",
+    "tipoInfo": "danger"
+  },
+  "MSG000045": {
+    "tipo": "text",
+    "descricao": "Password recovery| Ultragaz"
+  },
+  "MSG000046": {
+    "tipo": "text",
+    "descricao": "Error sending the e-mail! Please try again"
+  },
+  "MSG000047": {
+    "tipo": "toast",
+    "descricao": "An email containing a password recovery link has been sent to your email!",
+    "tipoInfo": "info",
+    "config": {
+      "timeClose": 0
+    }
+  },
+  "MSG000048": {
+    "tipo": "toast",
+    "descricao": "Your user has been updated",
+    "tipoInfo": "success"
+  },
+  "MSG000049": {
+    "tipo": "toast",
+    "descricao": "There is no record registered with the given ID",
+    "tipoInfo": "warning"
+  },
+  "MSG000050": {
+    "tipo": "toast",
+    "descricao": "User without any permission",
+    "tipoInfo": "warning"
+  },
+  "MSG000051": {
+    "tipo": "text",
+    "descricao": "Name required"
+  },
+  "MSG000052": {
+    "tipo": "text",
+    "descricao": "Register"
+  },
+  "MSG000053": {
+    "tipo": "text",
+    "descricao": "Dashboard"
+  },
+  "MSG000054": {
+    "tipo": "text",
+    "descricao": "Settings"
+  },
+  "MSG000055": {
+    "tipo": "text",
+    "descricao": "Users"
+  },
+  "MSG000056": {
+    "tipo": "text",
+    "descricao": "Groups"
+  },
+  "MSG000057": {
+    "tipo": "text",
+    "descricao": "Functionalities"
+  },
+  "MSG000058": {
+    "tipo": "text",
+    "descricao": "Email template"
+  },
+  "MSG000059": {
+    "tipo": "text",
+    "descricao": "My profile"
+  },
+  "MSG000060": {
+    "tipo": "text",
+    "descricao": "Logout"
+  },
+  "MSG000061": {
+    "tipo": "text",
+    "descricao": "Admin"
+  },
+  "MSG000062": {
+    "tipo": "text",
+    "descricao": "Access control"
+  },
+  "MSG000063": {
+    "tipo": "text",
+    "descricao": "Configure"
+  },
+  "MSG000064": {
+    "tipo": "text",
+    "descricao": "Users"
+  },
+  "MSG000065": {
+    "tipo": "text",
+    "descricao": "Group"
+  },
+  "MSG000066": {
+    "tipo": "text",
+    "descricao": "Permissions"
+  },
+  "MSG000067": {
+    "tipo": "text",
+    "descricao": "Operation successful!"
+  },
+  "MSG000068": {
+    "tipo": "text",
+    "descricao": "Welcome to Ultragaz!"
+  },
+  "MSG000069": {
+    "tipo": "text",
+    "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam velit nibh, viverra nec ante in, sagittis tempor mi. Aliquam nunc odio, viverra et nunc ac, vehicula dictum neque."
+  },
+  "MSG000070": {
+    "tipo": "text",
+    "descricao": "Do you still have an account?"
+  },
+  "MSG000071": {
+    "tipo": "alert",
+    "descricao": "Check the fields"
+  },
+  "MSG000072": {
+    "tipo": "text",
+    "descricao": "Check the field"
+  },
+  "MSG000073": {
+    "tipo": "text",
+    "descricao": "Required field"
+  },
+  "MSG000074": {
+    "tipo": "text",
+    "descricao": "Invalid email"
+  },
+  "MSG000075": {
+    "tipo": "text",
+    "descricao": "Password must be 6 characters"
+  },
+  "MSG000076": {
+    "tipo": "text",
+    "descricao": "Ddd must be 3 characters"
+  },
+  "MSG000077": {
+    "tipo": "text",
+    "descricao": "Duplicate field"
+  },
+  "MSG000078": {
+    "tipo": "toast",
+    "descricao": "By ",
+    "tipoInfo": "danger"
+  },
+  "MSG000079": {
+    "tipo": "toast",
+    "descricao": "You do not have permission ",
+    "tipoInfo": "danger"
+  },
+  "MSG000080": {
+    "tipo": "text",
+    "descricao": "Portuguese"
+  },
+  "MSG000081": {
+    "tipo": "text",
+    "descricao": "English"
+  },
+  "MSG000082": {
+    "tipo": "text",
+    "descricao": "Hello"
+  },
+  "MSG000083": {
+    "tipo": "text",
+    "descricao": "User Profile"
+  },
+  "MSG000084": {
+    "tipo": "text",
+    "descricao": "Logout"
+  },
+  "MSG000085": {
+    "tipo": "text",
+    "descricao": "My profile"
+  },
+  "MSG000086": {
+    "tipo": "text",
+    "descricao": "Account configurations"
+  },
+  "MSG000087": {
+    "tipo": "text",
+    "descricao": "update"
+  },
+  "MSG000088": {
+    "tipo": "text",
+    "descricao": "Contact Information"
+  },
+  "MSG000089": {
+    "tipo": "text",
+    "descricao": "Change Password"
+  },
+  "MSG000090": {
+    "tipo": "text",
+    "descricao": "Idioma"
+  },
+  "MSG000091": {
+    "tipo": "text",
+    "descricao": "Update your information"
+  },
+  "MSG000092": {
+    "tipo": "text",
+    "descricao": "Save"
+  },
+  "MSG000093": {
+    "tipo": "text",
+    "descricao": "Dice"
+  },
+  "MSG000094": {
+    "tipo": "text",
+    "descricao": "Avatar"
+  },
+  "MSG000095": {
+    "tipo": "text",
+    "descricao": "Allowed file types: png, jpg, jpeg."
+  },
+  "MSG000096": {
+    "tipo": "text",
+    "descricao": "Birth date"
+  },
+  "MSG000097": {
+    "tipo": "text",
+    "descricao": "Contact information"
+  },
+  "MSG000098": {
+    "tipo": "text",
+    "descricao": "Contact phone"
+  },
+  "MSG000099": {
+    "tipo": "text",
+    "descricao": "User edit"
+  },
+  "MSG000100": {
+    "tipo": "text",
+    "descricao": "Password update"
+  },
+  "MSG000101": {
+    "tipo": "text",
+    "descricao": "Set up a new user password."
+  },
+  "MSG000102": {
+    "tipo": "text",
+    "descricao": "Current Password"
+  },
+  "MSG000103": {
+    "tipo": "text",
+    "descricao": "New Password"
+  },
+  "MSG000104": {
+    "tipo": "text",
+    "descricao": "Confirm New Password"
+  },
+  "MSG000105": {
+    "tipo": "text",
+    "descricao": "Configurações de email"
+  },
+  "MSG000106": {
+    "tipo": "text",
+    "descricao": "Change your email settings"
+  },
+  "MSG000107": {
+    "tipo": "text",
+    "descricao": "E-mail notification:"
+  },
+  "MSG000108": {
+    "tipo": "text",
+    "descricao": "Email Notification"
+  },
+  "MSG000109": {
+    "tipo": "text",
+    "descricao": "Invalid birth date"
+  },
+  "MSG000110": {
+    "tipo": "alert",
+    "descricao": "Check the fields",
+    "tipoInfo": "warning"
+  },
+  "MSG000111": {
+    "tipo": "alert",
+    "descricao": "Registration updated successfully!",
+    "tipoInfo": "success"
+  },
+  "MSG000112": {
+    "tipo": "alert",
+    "descricao": "There is no record registered with the given ID",
+    "tipoInfo": "warning"
+  },
+  "MSG000113": {
+    "tipo": "text",
+    "descricao": "Update your profile information"
+  },
+  "MSG000114": {
+    "tipo": "text",
+    "descricao": "About"
+  },
+  "MSG000115": {
+    "tipo": "text",
+    "descricao": "Team"
+  },
+  "MSG000116": {
+    "tipo": "text",
+    "descricao": "Contact"
+  },
+  "MSG000117": {
+    "tipo": "text",
+    "descricao": "Gender"
+  },
+  "MSG000118": {
+    "tipo": "text",
+    "descricao": "User new"
+  },
+  "MSG000119": {
+    "tipo": "text",
+    "descricao": "Select"
+  },
+  "MSG000120": {
+    "tipo": "text",
+    "descricao": "Current password is required"
+  },
+  "MSG000121": {
+    "tipo": "text",
+    "descricao": "Current password must be {{value}} characters"
+  },
+  "MSG000122": {
+    "tipo": "text",
+    "descricao": "New password is required"
+  },
+  "MSG000123": {
+    "tipo": "text",
+    "descricao": "New password must be {{value}} characters"
+  },
+  "MSG000124": {
+    "tipo": "text",
+    "descricao": "Confirm new password is required"
+  },
+  "MSG000125": {
+    "tipo": "text",
+    "descricao": "Confirm new password must be {{value}} characters"
+  },
+  "MSG000126": {
+    "tipo": "text",
+    "descricao": "Current password is invalid"
+  },
+  "MSG000127": {
+    "tipo": "alert",
+    "tipoInfo": "success",
+    "descricao": "Password updated successfully"
+  },
+  "MSG000128": {
+    "tipo": "toast",
+    "tipoInfo": "warning",
+    "descricao": "Your access has expired. Please login again!"
+  },
+  "MSG000129": {
+    "tipo": "alert",
+    "tipoInfo": "danger",
+    "descricao": "An error occurred while saving the image (s), please try again!"
+  },
+  "MSG000130": {
+    "tipo": "toast",
+    "tipoInfo": "danger",
+    "descricao": "An unexpected error has occurred, please try again!"
+  },
+  "MSG000131": {
+    "tipo": "text",
+    "descricao": "Enter your username and password"
+  },
+  "MSG000132": {
+    "tipo": "text",
+    "descricao": "Save & Continue"
+  },
+  "MSG000133": {
+    "tipo": "text",
+    "descricao": "Save & New"
+  },
+  "MSG000134": {
+    "tipo": "text",
+    "descricao": "New Email Template"
+  },
+  "MSG000135": {
+    "tipo": "text",
+    "descricao": "Enter ifnormations"
+  },
+  "MSG000136": {
+    "tipo": "text",
+    "descricao": "Activate"
+  },
+  "MSG000137": {
+    "tipo": "text",
+    "descricao": "Inactivate"
+  },
+  "MSG000138": {
+    "tipo": "text",
+    "descricao": "Delete"
+  },
+  "MSG000139": {
+    "tipo": "text",
+    "descricao": "Edit template-email"
+  },
+  "MSG000140": {
+    "tipo": "text",
+    "descricao": "Send"
+  },
+  "MSG000141": {
+    "tipo": "text",
+    "descricao": "Do you really want to delete this record?"
+  },
+  "MSG000142": {
+    "tipo": "text",
+    "descricao": "Warning"
+  },
+  "MSG000143": {
+    "tipo": "text",
+    "descricao": "Ok"
+  },
+  "MSG000144": {
+    "tipo": "alert",
+    "tipoInfo": "success",
+    "descricao": "Registration deleted successfully!"
+  },
+  "MSG000145": {
+    "tipo": "alert",
+    "tipoInfo": "danger",
+    "descricao": "Error deleting the record!"
+  },
+  "MSG000146": {
+    "tipo": "alert",
+    "tipoInfo": "success",
+    "descricao": "Registration activated successfully!"
+  },
+  "MSG000147": {
+    "tipo": "alert",
+    "tipoInfo": "success",
+    "descricao": "Registro successfully deactivated!"
+  },
+  "MSG000148": {
+    "tipo": "toast",
+    "tipoInfo": "success",
+    "descricao": "Email successfully sent! Check your email"
+  },
+  "MSG000149": {
+    "tipo": "text",
+    "descricao": "Inactive"
+  },
+  "MSG000150": {
+    "tipo": "text",
+    "descricao": "Active"
+  },
+  "MSG000151": {
+    "tipo": "alert",
+    "tipoInfo": "success",
+    "descricao": "Registration saved successfully!"
+  },
+  "MSG000152": {
+    "tipo": "alert",
+    "tipoInfo": "warning",
+    "descricao": "Please enter an ID!"
+  },
+  "MSG000153": {
+    "tipo": "alert",
+    "tipoInfo": "warning",
+    "descricao": "Duplicate registration!"
+  },
+  "MSG000154": {
+    "tipo": "text",
+    "descricao": "New record"
+  },
+  "MSG000155": {
+    "tipo": "text",
+    "descricao": "Come back"
+  },
+  "MSG000156": {
+    "tipo": "text",
+    "descricao": "Id"
+  },
+  "MSG000157": {
+    "tipo": "text",
+    "descricao": "Send email"
+  },
+  "MSG000158": {
+    "tipo": "text",
+    "descricao": "Token"
+  },
+  "MSG000159": {
+    "tipo": "text",
+    "descricao": "Status"
+  },
+  "MSG000160": {
+    "tipo": "text",
+    "descricao": "Update date"
+  },
+  "MSG000161": {
+    "tipo": "text",
+    "descricao": "Creation date"
+  },
+  "MSG000162": {
+    "tipo": "text",
+    "descricao": "Actions"
+  },
+  "MSG000163": {
+    "tipo": "text",
+    "descricao": "Next"
+  },
+  "MSG000164": {
+    "tipo": "text",
+    "descricao": "Previous"
+  },
+  "MSG000165": {
+    "tipo": "text",
+    "descricao": "Num. of records"
+  },
+  "MSG000166": {
+    "tipo": "text",
+    "descricao": "All"
+  },
+  "MSG000167": {
+    "tipo": "alert",
+    "tipoInfo": "success",
+    "descricao": "Registration successfully cloned"
+  },
+  "MSG000168": {
+    "tipo": "text",
+    "descricao": "Showing"
+  },
+  "MSG000169": {
+    "tipo": "text",
+    "descricao": "to"
+  },
+  "MSG000170": {
+    "tipo": "text",
+    "descricao": "do"
+  },
+  "MSG000171": {
+    "tipo": "text",
+    "descricao": "record(s)"
+  },
+  "MSG000172": {
+    "tipo": "text",
+    "descricao": "Order by"
+  },
+  "MSG000173": {
+    "tipo": "text",
+    "descricao": "Email template"
+  },
+  "MSG000174": {
+    "tipo": "text",
+    "descricao": "Total:"
+  },
+  "MSG000175": {
+    "tipo": "text",
+    "descricao": "Edit"
+  },
+  "MSG000176": {
+    "tipo": "text",
+    "descricao": "Search"
+  },
+  "MSG000177": {
+    "tipo": "text",
+    "descricao": "Filter"
+  },
+  "MSG000178": {
+    "tipo": "text",
+    "descricao": "advanced"
+  },
+  "MSG000179": {
+    "tipo": "text",
+    "descricao": "Initial date"
+  },
+  "MSG000180": {
+    "tipo": "text",
+    "descricao": "Final date"
+  },
+  "MSG000181": {
+    "tipo": "text",
+    "descricao": "Open"
+  },
+  "MSG000182": {
+    "tipo": "text",
+    "descricao": "Clone"
+  },
+  "MSG000183": {
+    "tipo": "text",
+    "descricao": "Send email"
+  },
+  "MSG000184": {
+    "tipo": "text",
+    "descricao": "Content"
+  },
+  "MSG000185": {
+    "tipo": "text",
+    "descricao": "Mandatory content"
+  },
+  "MSG000186": {
+    "tipo": "alert",
+    "tipoInfo": "warning",
+    "descricao": "Invalid creation date"
+  },
+  "MSG000187": {
+    "tipo": "alert",
+    "tipoInfo": "warning",
+    "descricao": "Invalid update date"
+  },
+  "MSG000188": {
+    "tipo": "alert",
+    "tipoInfo": "warning",
+    "descricao": "Select the start date and / or end date"
+  },
+  "MSG000189": {
+    "tipo": "text",
+    "descricao": "Rotate left"
+  },
+  "MSG000190": {
+    "tipo": "text",
+    "descricao": "Rotate right"
+  },
+  "MSG000191": {
+    "tipo": "text",
+    "descricao": "Flip vertical"
+  },
+  "MSG000192": {
+    "tipo": "text",
+    "descricao": "Zoom -"
+  },
+  "MSG000193": {
+    "tipo": "text",
+    "descricao": "Zoom +"
+  },
+  "MSG000194": {
+    "tipo": "text",
+    "descricao": "Fill Aspect Ratio':'Contain Within Aspect Ratio"
+  },
+  "MSG000195": {
+    "tipo": "text",
+    "descricao": "Flip horizontal"
+  },
+  "MSG000196": {
+    "tipo": "text",
+    "descricao": "Select"
+  },
+  "MSG000197": {
+    "tipo": "text",
+    "descricao": "Crop"
+  },
+  "MSG000198": {
+    "tipo": "text",
+    "descricao": "Original"
+  },
+  "MSG000199": {
+    "tipo": "text",
+    "descricao": "Loading..."
+  },
+  "MSG000200": {
+    "tipo": "text",
+    "descricao": "Total user(s)"
+  },
+  "MSG000201": {
+    "tipo": "text",
+    "descricao": "Total grup(s)"
+  },
+  "MSG000202": {
+    "tipo": "text",
+    "descricao": "Total template(s)"
+  },
+  "MSG000203": {
+    "tipo": "text",
+    "descricao": "Total fileuivo(s)"
+  },
+  "MSG000204": {
+    "tipo": "text",
+    "descricao": "Male"
+  },
+  "MSG000205": {
+    "tipo": "text",
+    "descricao": "Femenine"
+  },
+  "MSG000206": {
+    "tipo": "text",
+    "descricao": "Verified email"
+  },
+  "MSG000207": {
+    "tipo": "text",
+    "descricao": "The address provided is already added to the user"
+  },
+  "MSG000208": {
+    "tipo": "text",
+    "descricao": "The address provided is already added to the user"
+  },
+  "MSG000209": {
+    "tipo": "text",
+    "descricao": "The address provided is already added to the user"
+  },
+  "MSG000210": {
+    "tipo": "text",
+    "descricao": "aaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  "MSG000211": {
+    "tipo": "text",
+    "descricao": "The phone number is already added to the user"
+  },
+  "MSG000212": {
+    "tipo": "text",
+    "descricao": "Yes"
+  },
+  "MSG000213": {
+    "tipo": "text",
+    "descricao": "No"
+  },
+  "MSG000214": {
+    "tipo": "text",
+    "descricao": "Blocked"
+  },
+  "MSG000215": {
+    "tipo": "text",
+    "descricao": "Under verification"
+  },
+  "MSG000216": {
+    "tipo": "text",
+    "descricao": "Expired"
+  },
+  "MSG000217": {
+    "tipo": "alert",
+    "descricao": "An email containing a password recovery link has been sent to your email!",
+    "tipoInfo": "info",
+    "config": {
+      "timeClose": 0
+    }
+  },
+  "MSG000218": {
+    "tipo": "text",
+    "descricao": "Feminine"
+  },
+  "MSG000219": {
+    "tipo": "text",
+    "descricao": "List of system features"
+  },
+  "MSG000220": {
+    "tipo": "text",
+    "descricao": "Description"
+  },
+  "MSG000221": {
+    "tipo": "text",
+    "descricao": "Functionality"
+  },
+  "MSG000222": {
+    "tipo": "text",
+    "descricao": "Associated Functionality"
+  },
+  "MSG000223": {
+    "tipo": "text",
+    "descricao": "Outro"
+  },
+  "MSG000224": {
+    "tipo": "alert",
+    "descricao": "It was not possible to delete the record (s), as they are related to other record (s) in the system!",
+    "tipoInfo": "warning",
+    "config": {
+      "timeClose": 0
+    }
+  },
+  "MSG000225": {
+    "tipo": "text",
+    "descricao": "Neighborhoods"
+  },
+  "MSG000226": {
+    "tipo": "text",
+    "descricao": "Cities"
+  },
+  "MSG000227": {
+    "tipo": "text",
+    "descricao": "Federative Units"
+  },
+  "MSG000228": {
+    "tipo": "text",
+    "descricao": "New"
+  },
+  "MSG000229": {
+    "tipo": "text",
+    "descricao": "List"
+  },
+  "MSG000230": {
+    "tipo": "text",
+    "descricao": "Files"
+  },
+  "MSG000231": {
+    "tipo": "text",
+    "descricao": "Total neighborhood (s)"
+  },
+  "MSG000232": {
+    "tipo": "text",
+    "descricao": "Total city (s)"
+  },
+  "MSG000233": {
+    "tipo": "text",
+    "descricao": "Total federative unit (s)"
+  },
+  "MSG000234": {
+    "tipo": "text",
+    "descricao": "Original name"
+  },
+  "MSG000235": {
+    "tipo": "text",
+    "descricao": "Path"
+  },
+  "MSG000236": {
+    "tipo": "text",
+    "descricao": "Type"
+  },
+  "MSG000237": {
+    "tipo": "text",
+    "descricao": "Extension"
+  },
+  "MSG000238": {
+    "tipo": "text",
+    "descricao": "File"
+  },
+  "MSG000239": {
+    "tipo": "text",
+    "descricao": "Image"
+  },
+  "MSG000240": {
+    "tipo": "text",
+    "descricao": "Neighborhood"
+  },
+  "MSG000241": {
+    "tipo": "text",
+    "descricao": "City"
+  },
+  "MSG000242": {
+    "tipo": "text",
+    "descricao": "State"
+  },
+  "MSG000243": {
+    "tipo": "text",
+    "descricao": "Phones"
+  },
+  "MSG000244": {
+    "tipo": "text",
+    "descricao": "Adress"
+  },
+  "MSG000245": {
+    "tipo": "text",
+    "descricao": "Ddd"
+  },
+  "MSG000246": {
+    "tipo": "text",
+    "descricao": "Number"
+  },
+  "MSG000247": {
+    "tipo": "text",
+    "descricao": "Cell phone"
+  },
+  "MSG000248": {
+    "tipo": "text",
+    "descricao": "Residential"
+  },
+  "MSG000249": {
+    "tipo": "text",
+    "descricao": "Commercial"
+  },
+  "MSG000250": {
+    "tipo": "text",
+    "descricao": "Title"
+  },
+  "MSG000251": {
+    "tipo": "text",
+    "descricao": "Zip code"
+  },
+  "MSG000252": {
+    "tipo": "text",
+    "descricao": "Public place"
+  },
+  "MSG000253": {
+    "tipo": "text",
+    "descricao": "Complement"
+  },
+  "MSG000254": {
+    "tipo": "text",
+    "descricao": "Number"
+  },
+  "MSG000255": {
+    "tipo": "alert",
+    "descricao": "Invalid zip code",
+    "tipoInfo": "warning"
+  },
+  "MSG000256": {
+    "tipo": "text",
+    "descricao": "After filling in the zip code, click on search and place the marker in the exact location corresponding to the address being informed."
+  },
+  "MSG000257": {
+    "tipo": "text",
+    "descricao": "Thumb"
+  },
+  "MSG000258": {
+    "tipo": "text",
+    "descricao": "Display"
+  }
+}
