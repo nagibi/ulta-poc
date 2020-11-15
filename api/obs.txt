@@ -1,0 +1,5 @@
+1 -https://medium.com/@manuelmauriciozamarrn/implementing-jwt-on-laravel-5-8-edc39f545886
+2 - https://github.com/Zizaco/entrust/issues/335
+3 - https://stackoverflow.com/questions/35181488/configure-memcached-in-laravel
+4 - https://github.com/Zizaco/entrust/issues/566
+5 - https://github.com/mtrajano/laravel-swagger
