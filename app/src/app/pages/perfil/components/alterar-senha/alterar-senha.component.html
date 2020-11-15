@@ -1,0 +1,123 @@
+<div class="flex-row-fluid ml-lg-8">
+  <!--begin::Card-->
+  <div class="card card-custom">
+    <!--begin::Header-->
+    <div class="card-header py-3">
+      <div class="card-title align-items-start flex-column">
+        <h3 class="card-label font-weight-bolder text-dark">{{ "MSG000089.descricao" | translate }}</h3>
+        <span class="text-muted font-weight-bold font-size-sm mt-1">{{ "MSG000100.descricao" | translate }}</span>
+      </div>
+    </div>
+    <!--end::Header-->
+    <!--begin::Form-->
+    <form class="form" novalidate="novalidate" id="kt_login_signin_form" [formGroup]="form" (ngSubmit)="salvar()"
+    (keydown.enter)="salvar(); (false)">
+      <div class="card-body">
+        <div class="form-group row">
+          <label class="col-xl-3 col-lg-3 col-form-label text-alert">{{ "MSG000102.descricao" | translate }}</label>
+          <div class="col-lg-9 col-xl-6">
+            <input 
+              type="password" 
+              maxlength={{qtdCaracters}} 
+              formControlName="senhaAtual"
+              [ngClass]="{'is-invalid': isControlInvalid('senhaAtual')}"
+              class="form-control form-control-lg form-control-solid mb-2"
+              [placeholder]="'MSG000102.descricao' | translate" />
+              <div *ngIf="isControlHasError('senhaAtual', 'required')" class="invalid-feedback">
+                <p>{{
+                        "MSG000073.descricao" | translate: { value: "strong" }
+                      }}
+                </p>
+            </div>
+            <div *ngIf="
+                      isControlHasError('senhaAtual', 'minlength') ||
+                      isControlHasError('senhaAtual', 'maxlength')
+                    " class="invalid-feedback">
+                <p>
+                    {{
+                        "MSG000121.descricao"
+                          | translate: { value: qtdCaracters }
+                      }}
+                </p>
+            </div>
+            <div *ngIf="isControlHasError('senhaAtual', 'error')" class="invalid-feedback">
+                <p>{{msgsError['senhaAtual']}}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-xl-3 col-lg-3 col-form-label text-alert">{{ "MSG000103.descricao" | translate }}</label>
+          <div class="col-lg-9 col-xl-6">
+            <input 
+              type="password" 
+              maxlength={{qtdCaracters}} 
+              formControlName="senha"
+              [ngClass]="{'is-invalid': isControlInvalid('senha')}"
+              class="form-control form-control-lg form-control-solid mb-2"
+              [placeholder]="'MSG000103.descricao' | translate" />
+              <div *ngIf="isControlHasError('senha', 'required')" class="invalid-feedback">
+                <p>{{
+                        "MSG000073.descricao" | translate: { value: "strong" }
+                      }}
+                </p>
+            </div>
+            <div *ngIf="
+                      isControlHasError('senha', 'minlength') ||
+                      isControlHasError('senha', 'maxlength')
+                    " class="invalid-feedback">
+                <p>
+                    {{
+                        "MSG000123.descricao"
+                          | translate: { value: qtdCaracters }
+                      }}
+                </p>
+            </div>
+            <div *ngIf="isControlHasError('senha', 'error')" class="invalid-feedback">
+                <p>{{msgsError['senha']}}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-xl-3 col-lg-3 col-form-label text-alert">{{ "MSG000104.descricao" | translate }}</label>
+          <div class="col-lg-9 col-xl-6">
+            <input 
+              type="password" 
+              maxlength={{qtdCaracters}} 
+              formControlName="confirmarSenha"
+              [ngClass]="{'is-invalid': isControlInvalid('confirmarSenha')}"
+              class="form-control form-control-lg form-control-solid mb-2"
+              [placeholder]="'MSG000104.descricao' | translate" />
+              <div *ngIf="isControlHasError('confirmarSenha', 'required')" class="invalid-feedback">
+                <p>{{
+                        "MSG000073.descricao" | translate: { value: "strong" }
+                      }}
+                </p>
+            </div>
+            <div *ngIf="
+                      isControlHasError('confirmarSenha', 'minlength') ||
+                      isControlHasError('confirmarSenha', 'maxlength')
+                    " class="invalid-feedback">
+                <p>
+                    {{
+                        "MSG000125.descricao"
+                          | translate: { value: qtdCaracters }
+                      }}
+                </p>
+            </div>
+            <div *ngIf="form.errors?.senhaMismatch" class="invalid-feedback">
+              <p>{{ "MSG000022.descricao" | translate }}</p>
+            </div>
+            <div *ngIf="isControlHasError('confirmarSenha', 'error')" class="invalid-feedback">
+              <p>{{msgsError['confirmarSenha']}}</p>
+          </div>
+          </div>
+        </div>
+
+      </div>
+
+    </form>
+    <!--end::Form-->
+  </div>
+</div>

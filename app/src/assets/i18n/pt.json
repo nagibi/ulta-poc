@@ -1,0 +1,1223 @@
+{
+  "MSG000001": {
+    "tipo": "text",
+    "descricao": "Criar uma conta"
+  },
+  "MSG000002": {
+    "tipo": "text",
+    "descricao": "Acessar"
+  },
+  "MSG000003": {
+    "tipo": "text",
+    "descricao": "E-mail"
+  },
+  "MSG000005": {
+    "tipo": "text",
+    "descricao": "E-mail é inválido"
+  },
+  "MSG000006": {
+    "tipo": "text",
+    "descricao": "aaaaaa"
+  },
+  "MSG000007": {
+    "tipo": "text",
+    "descricao": "Recuperar senha?"
+  },
+  "MSG000008": {
+    "tipo": "text",
+    "descricao": "Senha"
+  },
+  "MSG000009": {
+    "tipo": "text",
+    "descricao": "Senha é obrigatória"
+  },
+  "MSG000010": {
+    "tipo": "text",
+    "descricao": "Senha deve ter {{value}} caracteres"
+  },
+  "MSG000011": {
+    "tipo": "text",
+    "descricao": "Login"
+  },
+  "MSG000012": {
+    "tipo": "text",
+    "descricao": "Basta digitar seu endereço de e-mail abaixo e enviaremos um link informando sua senha!"
+  },
+  "MSG000013": {
+    "tipo": "text",
+    "descricao": "Recuperar senha"
+  },
+  "MSG000014": {
+    "tipo": "text",
+    "descricao": "Cancelar"
+  },
+  "MSG000015": {
+    "tipo": "text",
+    "descricao": "Digite as informações para criar a sua conta"
+  },
+  "MSG000016": {
+    "tipo": "text",
+    "descricao": "Cadastre-se"
+  },
+  "MSG000017": {
+    "tipo": "text",
+    "descricao": "Nome"
+  },
+  "MSG000018": {
+    "tipo": "text",
+    "descricao": "Confirmar senha"
+  },
+  "MSG000019": {
+    "tipo": "text",
+    "descricao": "Confirmar sua senha"
+  },
+  "MSG000020": {
+    "tipo": "text",
+    "descricao": "aaaaaaaaa"
+  },
+  "MSG000021": {
+    "tipo": "text",
+    "descricao": "Confirmar senha deve ter {{value}} caracteres"
+  },
+  "MSG000022": {
+    "tipo": "text",
+    "descricao": "Senha e confirmar senha estão diferentes"
+  },
+  "MSG000023": {
+    "tipo": "text",
+    "descricao": "Concordo com o"
+  },
+  "MSG000024": {
+    "tipo": "text",
+    "descricao": "termos e condição"
+  },
+  "MSG000025": {
+    "tipo": "toast",
+    "descricao": "Login ou senha inválidos!",
+    "tipoInfo": "warning"
+  },
+  "MSG000026": {
+    "tipo": "toast",
+    "descricao": "Usuário logado",
+    "tipoInfo": "success"
+  },
+  "MSG000027": {
+    "tipo": "text",
+    "descricao": "Usuário logado"
+  },
+  "MSG000028": {
+    "tipo": "toast",
+    "descricao": "Você ainda não confirmou o cadastro! Por favor, verifique seu email",
+    "tipoInfo": "info",
+    "config": {
+      "timeClose": 0
+    }
+  },
+  "MSG000029": {
+    "tipo": "toast",
+    "descricao": "Usuário expirado",
+    "tipoInfo": "danger"
+  },
+  "MSG000030": {
+    "tipo": "toast",
+    "descricao": "Por favor confirme seu cadastro! Verifique o seu e-mail.",
+    "tipoInfo": "info",
+    "config": {
+      "timeClose": 0
+    }
+  },
+  "MSG000031": {
+    "tipo": "toast",
+    "descricao": "Conta de usuário bloqueada",
+    "tipoInfo": "danger"
+  },
+  "MSG000032": {
+    "tipo": "toast",
+    "descricao": "Seja bem vindo, {{value}}!",
+    "tipoInfo": "success"
+  },
+  "MSG000033": {
+    "tipo": "text",
+    "descricao": "Fechar"
+  },
+  "MSG000034": {
+    "tipo": "toast",
+    "descricao": "Verifique os campos",
+    "tipoInfo": "warning"
+  },
+  "MSG000035": {
+    "tipo": "toast",
+    "descricao": "Já existe um usuário cadastrado com esse e-mail!",
+    "tipoInfo": "warning"
+  },
+  "MSG000036": {
+    "tipo": "text",
+    "descricao": "Confirme seu cadastro | Ultragaz"
+  },
+  "MSG000037": {
+    "tipo": "text",
+    "descricao": "Por favor, clique neste link para"
+  },
+  "MSG000038": {
+    "tipo": "toast",
+    "descricao": "Erro ao registrar-se! Por favor, tente novamente",
+    "tipoInfo": "danger"
+  },
+  "MSG000039": {
+    "tipo": "toast",
+    "descricao": "Registro efetuado com sucesso! Verifique o e-mail para confirmar o seu registro",
+    "tipoInfo": "success",
+    "config": {
+      "timeClose": 0
+    }
+  },
+  "MSG000040": {
+    "tipo": "toast",
+    "descricao": "Registro confirmado! Agora você pode efetuar o login.",
+    "tipoInfo": "success",
+    "config": {
+      "timeClose": 0
+    }
+  },
+  "MSG000041": {
+    "tipo": "toast",
+    "descricao": "Token expirou ou é inválido! Registre-se novamente.",
+    "tipoInfo": "warning",
+    "config": {
+      "timeClose": 0
+    }
+  },
+  "MSG000042": {
+    "tipo": "toast",
+    "descricao": "Formato de endereço de email inválido",
+    "tipoInfo": "warning"
+  },
+  "MSG000043": {
+    "tipo": "toast",
+    "descricao": "Nenhum usuário cadastrado com o e-mail informado!",
+    "tipoInfo": "warning"
+  },
+  "MSG000044": {
+    "tipo": "toast",
+    "descricao": "O usuário registrado com este login está desabilitado",
+    "tipoInfo": "danger"
+  },
+  "MSG000045": {
+    "tipo": "text",
+    "descricao": "Recuperação de Senha | Ultragaz"
+  },
+  "MSG000046": {
+    "tipo": "text",
+    "descricao": "Erro ao enviar o e-mail! Por favor, tente novamente"
+  },
+  "MSG000047": {
+    "tipo": "toast",
+    "descricao": "Um email contendo um link para recuperação de senha foi enviado para o seu e-mail!",
+    "tipoInfo": "info",
+    "config": {
+      "timeClose": 0
+    }
+  },
+  "MSG000048": {
+    "tipo": "toast",
+    "descricao": "Seu usuário foi atualizado",
+    "tipoInfo": "success"
+  },
+  "MSG000049": {
+    "tipo": "toast",
+    "descricao": "Não existe registro cadastrado com o ID informado",
+    "tipoInfo": "warning"
+  },
+  "MSG000050": {
+    "tipo": "toast",
+    "descricao": "Usuário sem nenhuma permissão",
+    "tipoInfo": "warning"
+  },
+  "MSG000051": {
+    "tipo": "text",
+    "descricao": "aaaaaaaaa"
+  },
+  "MSG000052": {
+    "tipo": "text",
+    "descricao": "Cadastrar"
+  },
+  "MSG000053": {
+    "tipo": "text",
+    "descricao": "Dashboard"
+  },
+  "MSG000054": {
+    "tipo": "text",
+    "descricao": "Conciliações"
+  },
+  "MSG000055": {
+    "tipo": "text",
+    "descricao": "Usuários"
+  },
+  "MSG000056": {
+    "tipo": "text",
+    "descricao": "Grupos"
+  },
+  "MSG000057": {
+    "tipo": "text",
+    "descricao": "Funcionalidades"
+  },
+  "MSG000058": {
+    "tipo": "text",
+    "descricao": "Templates de e-mails"
+  },
+  "MSG000059": {
+    "tipo": "text",
+    "descricao": "Meu perfil"
+  },
+  "MSG000060": {
+    "tipo": "text",
+    "descricao": "Sair"
+  },
+  "MSG000061": {
+    "tipo": "text",
+    "descricao": "Admin"
+  },
+  "MSG000062": {
+    "tipo": "text",
+    "descricao": "Controle de acesso"
+  },
+  "MSG000063": {
+    "tipo": "text",
+    "descricao": "Configurar"
+  },
+  "MSG000064": {
+    "tipo": "text",
+    "descricao": "Usuários"
+  },
+  "MSG000065": {
+    "tipo": "text",
+    "descricao": "Grupo"
+  },
+  "MSG000066": {
+    "tipo": "text",
+    "descricao": "Permissões"
+  },
+  "MSG000067": {
+    "tipo": "text",
+    "descricao": "Operação efetuada com sucesso!"
+  },
+  "MSG000068": {
+    "tipo": "text",
+    "descricao": "Seja bem-vindo!"
+  },
+  "MSG000069": {
+    "tipo": "text",
+    "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam velit nibh, viverra nec ante in, sagittis tempor mi. Aliquam nunc odio, viverra et nunc ac, vehicula dictum neque."
+  },
+  "MSG000070": {
+    "tipo": "text",
+    "descricao": "Ainda não possui uma conta?"
+  },
+  "MSG000071": {
+    "tipo": "alert",
+    "descricao": "Verifique os campos",
+    "tipoInfo": "warning"
+  },
+  "MSG000072": {
+    "tipo": "text",
+    "descricao": "Verifique o campo"
+  },
+  "MSG000073": {
+    "tipo": "text",
+    "descricao": "Campo obrigatório"
+  },
+  "MSG000074": {
+    "tipo": "text",
+    "descricao": "E-mail inválido"
+  },
+  "MSG000075": {
+    "tipo": "text",
+    "descricao": "A senha precisa ter 6 caracteres"
+  },
+  "MSG000076": {
+    "tipo": "text",
+    "descricao": "O ddd precisa ter 3 caracteres"
+  },
+  "MSG000077": {
+    "tipo": "text",
+    "descricao": "Campo em duplicidade"
+  },
+  "MSG000078": {
+    "tipo": "toast",
+    "descricao": "Por ",
+    "tipoInfo": "danger"
+  },
+  "MSG000079": {
+    "tipo": "toast",
+    "descricao": "Você não possui permissão ",
+    "tipoInfo": "danger"
+  },
+  "MSG000080": {
+    "tipo": "text",
+    "descricao": "Português"
+  },
+  "MSG000081": {
+    "tipo": "text",
+    "descricao": "Inglês"
+  },
+  "MSG000082": {
+    "tipo": "text",
+    "descricao": "Olá"
+  },
+  "MSG000083": {
+    "tipo": "text",
+    "descricao": "Perfil do Usuário"
+  },
+  "MSG000084": {
+    "tipo": "text",
+    "descricao": "Sair"
+  },
+  "MSG000085": {
+    "tipo": "text",
+    "descricao": "Meu Perfil"
+  },
+  "MSG000086": {
+    "tipo": "text",
+    "descricao": "Configurações da conta"
+  },
+  "MSG000087": {
+    "tipo": "text",
+    "descricao": "atualizar"
+  },
+  "MSG000088": {
+    "tipo": "text",
+    "descricao": "Informações"
+  },
+  "MSG000089": {
+    "tipo": "text",
+    "descricao": "Alterar Senha"
+  },
+  "MSG000090": {
+    "tipo": "text",
+    "descricao": "Language"
+  },
+  "MSG000091": {
+    "tipo": "text",
+    "descricao": "Atualize suas informações"
+  },
+  "MSG000092": {
+    "tipo": "text",
+    "descricao": "Salvar"
+  },
+  "MSG000093": {
+    "tipo": "text",
+    "descricao": "Dados"
+  },
+  "MSG000094": {
+    "tipo": "text",
+    "descricao": "Avatar"
+  },
+  "MSG000095": {
+    "tipo": "text",
+    "descricao": "Tipos de arquivos permitidos: png, jpg, jpeg."
+  },
+  "MSG000096": {
+    "tipo": "text",
+    "descricao": "Data nascimento"
+  },
+  "MSG000097": {
+    "tipo": "text",
+    "descricao": "Informações para contato"
+  },
+  "MSG000098": {
+    "tipo": "text",
+    "descricao": "Telefone de contato"
+  },
+  "MSG000099": {
+    "tipo": "text",
+    "descricao": "Editar registro"
+  },
+  "MSG000100": {
+    "tipo": "text",
+    "descricao": "Atualização de senha"
+  },
+  "MSG000101": {
+    "tipo": "text",
+    "descricao": "Configure uma nova senha de usuário."
+  },
+  "MSG000102": {
+    "tipo": "text",
+    "descricao": "Senha atual"
+  },
+  "MSG000103": {
+    "tipo": "text",
+    "descricao": "Nova Senha"
+  },
+  "MSG000104": {
+    "tipo": "text",
+    "descricao": "Confirmar Nova Senha"
+  },
+  "MSG000105": {
+    "tipo": "text",
+    "descricao": "Configurações de email"
+  },
+  "MSG000106": {
+    "tipo": "text",
+    "descricao": "Alterar suas configurações de email"
+  },
+  "MSG000107": {
+    "tipo": "text",
+    "descricao": "Notificação por e-mail:"
+  },
+  "MSG000108": {
+    "tipo": "text",
+    "descricao": "Notificação de Email"
+  },
+  "MSG000109": {
+    "tipo": "text",
+    "descricao": "Data nascimento inválida"
+  },
+  "MSG000110": {
+    "tipo": "alert",
+    "descricao": "Verifique os campos",
+    "tipoInfo": "warning"
+  },
+  "MSG000111": {
+    "tipo": "alert",
+    "descricao": "Registro atualizado com sucesso!",
+    "tipoInfo": "success"
+  },
+  "MSG000112": {
+    "tipo": "alert",
+    "descricao": "Não existe registro cadastrado com o ID informado",
+    "tipoInfo": "warning"
+  },
+  "MSG000113": {
+    "tipo": "text",
+    "descricao": "Atualizar informações do seu perfil"
+  },
+  "MSG000114": {
+    "tipo": "text",
+    "descricao": "Sobre"
+  },
+  "MSG000115": {
+    "tipo": "text",
+    "descricao": "Equipe"
+  },
+  "MSG000116": {
+    "tipo": "text",
+    "descricao": "Contato"
+  },
+  "MSG000117": {
+    "tipo": "text",
+    "descricao": "Sexo"
+  },
+  "MSG000118": {
+    "tipo": "text",
+    "descricao": "Novo registro"
+  },
+  "MSG000119": {
+    "tipo": "text",
+    "descricao": "Selecione"
+  },
+  "MSG000120": {
+    "tipo": "text",
+    "descricao": "aaaaaaaaa"
+  },
+  "MSG000121": {
+    "tipo": "text",
+    "descricao": "Senha atual deve ter {{value}} caracteres"
+  },
+  "MSG000122": {
+    "tipo": "text",
+    "descricao": "aaaaaaaaa"
+  },
+  "MSG000123": {
+    "tipo": "text",
+    "descricao": "Nova senhadeve ter {{value}} caracteres"
+  },
+  "MSG000124": {
+    "tipo": "text",
+    "descricao": "aaaaaaaaaaa"
+  },
+  "MSG000125": {
+    "tipo": "text",
+    "descricao": "Confiramr nova senha deve ter {{value}} caracteres"
+  },
+  "MSG000126": {
+    "tipo": "text",
+    "descricao": "Senha atual é inválida"
+  },
+  "MSG000127": {
+    "tipo": "alert",
+    "tipoInfo": "success",
+    "descricao": "Senha atualizado com sucesso"
+  },
+  "MSG000128": {
+    "tipo": "toast",
+    "tipoInfo": "warning",
+    "descricao": "Dados invalidos ou seu login expirou!"
+  },
+  "MSG000129": {
+    "tipo": "alert",
+    "tipoInfo": "danger",
+    "descricao": "Ocorreu um erro ao salvar a(s) imagem(s), por favor tente novamente!"
+  },
+  "MSG000130": {
+    "tipo": "toast",
+    "tipoInfo": "danger",
+    "descricao": "Ocorreu um erro inesperado, por favor tente novamente!"
+  },
+  "MSG000131": {
+    "tipo": "text",
+    "descricao": "Digite seu e-mail de usuário e senha"
+  },
+  "MSG000132": {
+    "tipo": "text",
+    "descricao": "Salvar & continuar"
+  },
+  "MSG000133": {
+    "tipo": "text",
+    "descricao": "Salvar & novo"
+  },
+  "MSG000134": {
+    "tipo": "text",
+    "descricao": "aaaaaaaaaaa"
+  },
+  "MSG000135": {
+    "tipo": "text",
+    "descricao": "Digite as ifnormações"
+  },
+  "MSG000136": {
+    "tipo": "text",
+    "descricao": "Ativar"
+  },
+  "MSG000137": {
+    "tipo": "text",
+    "descricao": "Inativar"
+  },
+  "MSG000138": {
+    "tipo": "text",
+    "descricao": "Excluir"
+  },
+  "MSG000139": {
+    "tipo": "text",
+    "descricao": "aaaaaaaaaaaaaaaaaaaaaa"
+  },
+  "MSG000140": {
+    "tipo": "text",
+    "descricao": "Enviar"
+  },
+  "MSG000141": {
+    "tipo": "text",
+    "descricao": "Deseja realmente excluir esse registro?"
+  },
+  "MSG000142": {
+    "tipo": "text",
+    "descricao": "Aviso"
+  },
+  "MSG000143": {
+    "tipo": "text",
+    "descricao": "Ok"
+  },
+  "MSG000144": {
+    "tipo": "alert",
+    "tipoInfo": "success",
+    "descricao": "Registro deletado com sucesso!"
+  },
+  "MSG000145": {
+    "tipo": "alert",
+    "tipoInfo": "danger",
+    "descricao": "Erro ao deletar o registro!"
+  },
+  "MSG000146": {
+    "tipo": "alert",
+    "tipoInfo": "success",
+    "descricao": "Registro ativado com sucesso!"
+  },
+  "MSG000147": {
+    "tipo": "alert",
+    "tipoInfo": "success",
+    "descricao": "Registro inativado com sucesso!"
+  },
+  "MSG000148": {
+    "tipo": "toast",
+    "tipoInfo": "success",
+    "descricao": "E-mail enviado com sucesso! Verifique o seu e-mail"
+  },
+  "MSG000149": {
+    "tipo": "text",
+    "descricao": "Inativo"
+  },
+  "MSG000150": {
+    "tipo": "text",
+    "descricao": "Ativo"
+  },
+  "MSG000151": {
+    "tipo": "alert",
+    "tipoInfo": "success",
+    "descricao": "Registro salvo com sucesso!"
+  },
+  "MSG000152": {
+    "tipo": "alert",
+    "tipoInfo": "warning",
+    "descricao": "Por favor informe um ID!"
+  },
+  "MSG000153": {
+    "tipo": "alert",
+    "tipoInfo": "warning",
+    "descricao": "Registro em duplicidade!"
+  },
+  "MSG000154": {
+    "tipo": "text",
+    "descricao": "Novo registro"
+  },
+  "MSG000155": {
+    "tipo": "text",
+    "descricao": "Voltar"
+  },
+  "MSG000156": {
+    "tipo": "text",
+    "descricao": "Id"
+  },
+  "MSG000157": {
+    "tipo": "text",
+    "descricao": "Enviar e-mail"
+  },
+  "MSG000158": {
+    "tipo": "text",
+    "descricao": "Token"
+  },
+  "MSG000159": {
+    "tipo": "text",
+    "descricao": "Status"
+  },
+  "MSG000160": {
+    "tipo": "text",
+    "descricao": "Data atualização"
+  },
+  "MSG000161": {
+    "tipo": "text",
+    "descricao": "Data criação"
+  },
+  "MSG000162": {
+    "tipo": "text",
+    "descricao": "Ações"
+  },
+  "MSG000163": {
+    "tipo": "text",
+    "descricao": "Próximo"
+  },
+  "MSG000164": {
+    "tipo": "text",
+    "descricao": "Anterior"
+  },
+  "MSG000165": {
+    "tipo": "text",
+    "descricao": "Qtd. de registros"
+  },
+  "MSG000166": {
+    "tipo": "text",
+    "descricao": "Todos"
+  },
+  "MSG000167": {
+    "tipo": "alert",
+    "tipoInfo": "success",
+    "descricao": "Registro clonado com sucesso!"
+  },
+  "MSG000168": {
+    "tipo": "text",
+    "descricao": "Mostrando"
+  },
+  "MSG000169": {
+    "tipo": "text",
+    "descricao": "até"
+  },
+  "MSG000170": {
+    "tipo": "text",
+    "descricao": "de"
+  },
+  "MSG000171": {
+    "tipo": "text",
+    "descricao": "registro(s)"
+  },
+  "MSG000172": {
+    "tipo": "text",
+    "descricao": "Ordenar por"
+  },
+  "MSG000173": {
+    "tipo": "text",
+    "descricao": "Template e-mails"
+  },
+  "MSG000174": {
+    "tipo": "text",
+    "descricao": "Total:"
+  },
+  "MSG000175": {
+    "tipo": "text",
+    "descricao": "Editar"
+  },
+  "MSG000176": {
+    "tipo": "text",
+    "descricao": "Pesquisar"
+  },
+  "MSG000177": {
+    "tipo": "text",
+    "descricao": "Filtro"
+  },
+  "MSG000178": {
+    "tipo": "text",
+    "descricao": "avançado"
+  },
+  "MSG000179": {
+    "tipo": "text",
+    "descricao": "Data inicial"
+  },
+  "MSG000180": {
+    "tipo": "text",
+    "descricao": "Data final"
+  },
+  "MSG000181": {
+    "tipo": "text",
+    "descricao": "Abrir"
+  },
+  "MSG000182": {
+    "tipo": "text",
+    "descricao": "Clonar"
+  },
+  "MSG000183": {
+    "tipo": "text",
+    "descricao": "Enviar e-mail"
+  },
+  "MSG000184": {
+    "tipo": "text",
+    "descricao": "Conteúdo"
+  },
+  "MSG000185": {
+    "tipo": "text",
+    "descricao": "aaaaaaaa"
+  },
+  "MSG000186": {
+    "tipo": "alert",
+    "tipoInfo": "warning",
+    "descricao": "Data criação inválida"
+  },
+  "MSG000187": {
+    "tipo": "alert",
+    "tipoInfo": "warning",
+    "descricao": "Data atualização inválida"
+  },
+  "MSG000188": {
+    "tipo": "alert",
+    "tipoInfo": "warning",
+    "descricao": "Selecione a data inicial e/ou data final"
+  },
+  "MSG000189": {
+    "tipo": "text",
+    "descricao": "Rotacionar para esquerda"
+  },
+  "MSG000190": {
+    "tipo": "text",
+    "descricao": "Rotacionar para direita"
+  },
+  "MSG000191": {
+    "tipo": "text",
+    "descricao": "Girar verticalmente"
+  },
+  "MSG000192": {
+    "tipo": "text",
+    "descricao": "Zoom -"
+  },
+  "MSG000193": {
+    "tipo": "text",
+    "descricao": "Zoom +"
+  },
+  "MSG000194": {
+    "tipo": "text",
+    "descricao": "Proporção de preenchimento ':' Contenção da proporção"
+  },
+  "MSG000195": {
+    "tipo": "text",
+    "descricao": "Girar horizontalmente"
+  },
+  "MSG000196": {
+    "tipo": "text",
+    "descricao": "Selecionar"
+  },
+  "MSG000197": {
+    "tipo": "text",
+    "descricao": "Recorte"
+  },
+  "MSG000198": {
+    "tipo": "text",
+    "descricao": "Original"
+  },
+  "MSG000199": {
+    "tipo": "text",
+    "descricao": "Processando..."
+  },
+  "MSG000200": {
+    "tipo": "text",
+    "descricao": "Total de usuários"
+  },
+  "MSG000201": {
+    "tipo": "text",
+    "descricao": "Total de grupos"
+  },
+  "MSG000202": {
+    "tipo": "text",
+    "descricao": "Total de templates"
+  },
+  "MSG000203": {
+    "tipo": "text",
+    "descricao": "Total de arquivos"
+  },
+  "MSG000204": {
+    "tipo": "text",
+    "descricao": "Masculino"
+  },
+  "MSG000205": {
+    "tipo": "text",
+    "descricao": "Feminino"
+  },
+  "MSG000206": {
+    "tipo": "text",
+    "descricao": "Confirmação/Cadastro"
+  },
+  "MSG000207": {
+    "tipo": "text",
+    "descricao": "O endereço informado já está adicionado ao usuário"
+  },
+  "MSG000208": {
+    "tipo": "text",
+    "descricao": "Usuário não possui o Endereço informado"
+  },
+  "MSG000209": {
+    "tipo": "text",
+    "descricao": "Não existe um telefone cadastrado com o ID informado"
+  },
+  "MSG000210": {
+    "tipo": "text",
+    "descricao": "O telefone informado já está adicionado ao usuário"
+  },
+  "MSG000211": {
+    "tipo": "text",
+    "descricao": "O telefone informado já está adicionado ao usuário"
+  },
+  "MSG000212": {
+    "tipo": "text",
+    "descricao": "Sim"
+  },
+  "MSG000213": {
+    "tipo": "text",
+    "descricao": "Não"
+  },
+  "MSG000214": {
+    "tipo": "text",
+    "descricao": "Bloqueado"
+  },
+  "MSG000215": {
+    "tipo": "text",
+    "descricao": "Verificação"
+  },
+  "MSG000216": {
+    "tipo": "text",
+    "descricao": "Expirado"
+  },
+  "MSG000217": {
+    "tipo": "alert",
+    "descricao": "Um email contendo um link para recuperação de senha foi enviado para o seu e-mail!",
+    "tipoInfo": "info",
+    "config": {
+      "timeClose": 0
+    }
+  },
+  "MSG000218": {
+    "tipo": "text",
+    "descricao": "Feminino"
+  },
+  "MSG000219": {
+    "tipo": "text",
+    "descricao": "Lista de funcionalidades do sistema"
+  },
+  "MSG000220": {
+    "tipo": "text",
+    "descricao": "Descrição"
+  },
+  "MSG000221": {
+    "tipo": "text",
+    "descricao": "Funcionalidade"
+  },
+  "MSG000222": {
+    "tipo": "text",
+    "descricao": "Funcionalidade Associadas"
+  },
+  "MSG000223": {
+    "tipo": "text",
+    "descricao": "Outro"
+  },
+  "MSG000224": {
+    "tipo": "alert",
+    "descricao": "Não foi possível deletar algun(s) registro(s), pois estão relacionados a outro(s) no sistema!",
+    "tipoInfo": "warning",
+    "config": {
+      "timeClose": 0
+    }
+  },
+  "MSG000225": {
+    "tipo": "text",
+    "descricao": "Bairros"
+  },
+  "MSG000226": {
+    "tipo": "text",
+    "descricao": "aaaaaaaaaaaaaa"
+  },
+  "MSG000227": {
+    "tipo": "text",
+    "descricao": "aaaaaaaaaaaaaaaa"
+  },
+  "MSG000228": {
+    "tipo": "text",
+    "descricao": "Novo"
+  },
+  "MSG000229": {
+    "tipo": "text",
+    "descricao": "Listar"
+  },
+  "MSG000230": {
+    "tipo": "text",
+    "descricao": "Arquivos"
+  },
+  "MSG000231": {
+    "tipo": "text",
+    "descricao": "Total de bairro(s)"
+  },
+  "MSG000232": {
+    "tipo": "text",
+    "descricao": "Total de cidade(s)"
+  },
+  "MSG000233": {
+    "tipo": "text",
+    "descricao": "Total de unidade(s) federativa(s)"
+  },
+  "MSG000234": {
+    "tipo": "text",
+    "descricao": "Nome original"
+  },
+  "MSG000235": {
+    "tipo": "text",
+    "descricao": "Caminho"
+  },
+  "MSG000236": {
+    "tipo": "text",
+    "descricao": "Tipo"
+  },
+  "MSG000237": {
+    "tipo": "text",
+    "descricao": "Extensão"
+  },
+  "MSG000238": {
+    "tipo": "text",
+    "descricao": "Arquivo"
+  },
+  "MSG000239": {
+    "tipo": "text",
+    "descricao": "Imagem"
+  },
+  "MSG000240": {
+    "tipo": "text",
+    "descricao": "Bairro"
+  },
+  "MSG000241": {
+    "tipo": "text",
+    "descricao": "Cidade"
+  },
+  "MSG000242": {
+    "tipo": "text",
+    "descricao": "Estado"
+  },
+  "MSG000243": {
+    "tipo": "text",
+    "descricao": "Telefones"
+  },
+  "MSG000244": {
+    "tipo": "text",
+    "descricao": "Endereços"
+  },
+  "MSG000245": {
+    "tipo": "text",
+    "descricao": "Ddd"
+  },
+  "MSG000246": {
+    "tipo": "text",
+    "descricao": "Número"
+  },
+  "MSG000247": {
+    "tipo": "text",
+    "descricao": "Celular"
+  },
+  "MSG000248": {
+    "tipo": "text",
+    "descricao": "Residêncial"
+  },
+  "MSG000249": {
+    "tipo": "text",
+    "descricao": "Comercial"
+  },
+  "MSG000250": {
+    "tipo": "text",
+    "descricao": "Título"
+  },
+  "MSG000251": {
+    "tipo": "text",
+    "descricao": "Cep"
+  },
+  "MSG000252": {
+    "tipo": "text",
+    "descricao": "Logradouro"
+  },
+  "MSG000253": {
+    "tipo": "text",
+    "descricao": "Complemento"
+  },
+  "MSG000254": {
+    "tipo": "text",
+    "descricao": "Número"
+  },
+  "MSG000255": {
+    "tipo": "alert",
+    "descricao": "Cep inválido",
+    "tipoInfo": "warning"
+  },
+  "MSG000256": {
+    "tipo": "text",
+    "descricao": "Após preencher o CEP, clique em pesquisar e posicione o marcador no local exato correspondente ao endereço que está sendo informado."
+  },
+  "MSG000257": {
+    "tipo": "text",
+    "descricao": "Thumb"
+  },
+  "MSG000258": {
+    "tipo": "text",
+    "descricao": "Exibir"
+  },
+  "MSG000259": {
+    "tipo": "toast",
+    "descricao": "O e-mail informado, já está cadastrado no sistema! Caso não lembre da senha, clique em Recuperar senha?",
+    "tipoInfo": "warning",
+    "config": {
+      "timeClose": 0
+    }
+  },
+  "MSG000260": {
+    "tipo": "toast",
+    "tipoInfo": "success",
+    "descricao": "Cadastro confirmado com sucesso!"
+  },
+  "MSG000261": {
+    "tipo": "text",
+    "descricao": "Documentos"
+  },
+  "MSG000262": {
+    "tipo": "text",
+    "descricao": "Total de documentos"
+  },
+  "MSG000263": {
+    "tipo": "text",
+    "descricao": "Aguardando processamento"
+  },
+  "MSG000264": {
+    "tipo": "text",
+    "descricao": "Processado"
+  },
+  "MSG000265": {
+    "tipo": "text",
+    "descricao": "Em processamento"
+  },
+  "MSG000266": {
+    "tipo": "text",
+    "descricao": "Erro ao processar"
+  },
+  "MSG000267": {
+    "tipo": "text",
+    "descricao": "Detalhamento"
+  },
+  "MSG000268": {
+    "tipo": "text",
+    "descricao": "Deseja realmente re-processar o(s) documento(s)?"
+  },
+  "MSG000269": {
+    "tipo": "toast",
+    "descricao": "Token expirou",
+    "tipoInfo": "warning",
+    "config": {
+      "timeClose": 0
+    }
+  },
+  "MSG000270": {
+    "tipo": "toast",
+    "descricao": "Token inválido",
+    "tipoInfo": "warning",
+    "config": {
+      "timeClose": 0
+    }
+  },
+  "MSG000271": {
+    "tipo": "toast",
+    "descricao": "Usuário não foi encontrado",
+    "tipoInfo": "warning",
+    "config": {
+      "timeClose": 0
+    }
+  },
+  "MSG000272": {
+    "tipo": "text",
+    "descricao": "Tipo"
+  },
+  "MSG000273": {
+    "tipo": "text",
+    "descricao": "Faturamentos"
+  },
+  "MSG000274": {
+    "tipo": "text",
+    "descricao": "Total de Faturamentos"
+  },
+  "MSG000275": {
+    "tipo": "text",
+    "descricao": "Documento"
+  },
+  "MSG000276": {
+    "tipo": "text",
+    "descricao": "Faturamento"
+  },
+  "MSG000278": {
+    "tipo": "text",
+    "descricao": "Desmonstrativo"
+  }
+  ,
+  "MSG000279": {
+    "tipo": "text",
+    "descricao": "Data"
+  },
+  "MSG000280": {
+    "tipo": "text",
+    "descricao": "Valor"
+  },
+  "MSG000281": {
+    "tipo": "text",
+    "descricao": "Inicial"
+  },
+  "MSG000282": {
+    "tipo": "text",
+    "descricao": "Final"
+  },
+  "MSG000283": {
+    "tipo": "text",
+    "descricao": "Demonstrativos de Faturamento"
+  }
+  ,
+  "MSG000284": {
+    "tipo": "text",
+    "descricao": "Demonstrativos"
+  }
+  ,
+  "MSG000285": {
+    "tipo": "text",
+    "descricao": "Código"
+  }
+}

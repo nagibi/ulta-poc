@@ -1,0 +1,4 @@
+<ng-container *ngIf=label>
+    <span *ngIf=label.visible [ngClass]=label.type [attr.title]="label.title != null ? label.title : label.text"
+    class="label label-lg label-inline font-weight-bolder mr-2">{{label.text}}</span>
+</ng-container>

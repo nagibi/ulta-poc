@@ -1,0 +1,52 @@
+<div class="subheader py-2 py-lg-4  subheader-solid " id="kt_subheader">
+  <div class=" container-fluid  d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
+    <div class="d-flex align-items-center flex-wrap mr-2">
+
+      <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">{{title}}</h5>
+
+      <div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-5 bg-gray-200"></div>
+
+      <div class="d-flex align-items-center" id="kt_subheader_search">
+        <span class="text-dark-50 font-weight-bold" id="kt_subheader_total">{{text}} <span *ngIf=label.html [innerHTML]=label.html></span> <app-label [label]="label"></app-label></span>
+      </div>
+
+    </div>
+
+    <div class="d-flex align-items-center">
+      
+      <span *ngFor="let button of buttons; let i = index">
+        
+        <button 
+          type="button" 
+          *ngIf="!button.actions && (button.visible == null || button.visible)" 
+          (click)=button.click() 
+          [attr.title]="button.title != null ? button.title : button.text"
+          [ngClass]=button.type
+          class="btn font-weight-bold py-2 px-5 ml-2"><i *ngIf=button.icon [ngClass]=button.icon aria-hidden="true"></i> {{button.text}}</button>
+
+        <div *ngIf="button.actions && button.actions.length > 0" ngbDropdown class="btn-group">
+          
+          <button type="button" [attr.title]="button.title != null ? button.title : button.text" (click)=button.click() [ngClass]=button.type class="btn font-weight-bold py-2 px-5 ml-2">{{button.text}}</button>
+          <button id="{{i}}" ngbDropdownToggle type="button"
+             class="btn btn-light-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+          </button>
+
+          <div ngbDropdownMenu attr.aria-labelledby="{{i}}"
+            class="dropdown-menu dropdown-menu-sm p-0 m-0 dropdown-menu-right">
+            <ul class="navi py-5">
+              <li class="navi-item" *ngFor="let actionButton of button.actions; let j = index">
+                <a [attr.title]="button.title != null ? button.title : button.text" *ngIf="actionButton.visible == null || actionButton.visible" (click)=actionButton.click() class="navi-link">
+                  <span *ngIf="actionButton.icon" class="navi-icon"><i [ngClass]="actionButton.icon"></i></span>
+                  <span class="navi-text">{{actionButton.text}}</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </span>
+      
+    </div>
+  </div>
+</div>

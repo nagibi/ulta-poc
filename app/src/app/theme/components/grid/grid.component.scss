@@ -1,0 +1,87 @@
+.sorting{
+    cursor: pointer !important;
+}
+
+:host {
+	.splash-screen {
+		background-color: #f2f3f8;
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		width: 100%;
+        z-index: 1000;
+        
+
+		img {
+			margin-left: calc(100vw - 100%);
+			width: 90px;
+			margin-bottom: 30px;
+		}
+
+		span {
+			margin-left: calc(100vw - 100%);
+			margin-bottom: 30px;
+		}
+
+		::ng-deep {
+			[role="progressbar"] {
+				margin-left: calc(100vw - 100%);
+			}
+			.mat-progress-spinner circle, .mat-spinner circle {
+				// brand color
+				stroke: #5d78ff;
+			}
+		}
+	}
+}
+#divLoading
+{
+display : none;
+}
+#divLoading.show
+{
+display : block;
+position : fixed;
+z-index: 100;
+background-image : url('http://loadinggif.com/images/image-selection/3.gif');
+background-color:#666;
+opacity : 0.4;
+background-repeat : no-repeat;
+background-position : center;
+left : 0;
+bottom : 0;
+right : 0;
+top : 0;
+}
+#loadinggif.show
+{
+left : 50%;
+top : 50%;
+position : absolute;
+z-index : 101;
+width : 200px;
+height : 32px;
+margin-left : -16px;
+margin-top : -16px;
+}
+div.content {
+width : 1000px;
+height : 1000px;
+}
+
+#overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 99999;
+    background-color: #FFF;
+    filter: alpha(opacity=65);
+    -moz-opacity: 0.65;
+    opacity: 0.65;
+    display: block;
+}

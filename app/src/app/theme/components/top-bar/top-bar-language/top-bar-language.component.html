@@ -1,0 +1,39 @@
+<div ngbDropdown class="dropdown">
+  <!--begin::Toggle-->
+  <div class="topbar-item" style="height: 65px;" data-toggle="dropdown" data-offset="10px,0px">
+    <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1">
+      <img class="h-20px w-20px rounded-sm" [src]="idiomaSelecionado == 'pt' ? 'assets/media/svg/flags/011-brazil.svg' : 'assets/media/svg/flags/226-united-states.svg'"
+        id="navbarDropdownLanguage" ngbDropdownToggle />
+    </div>
+  </div>
+  <!--end::Toggle-->
+  <!--begin::Dropdown-->
+  <div class="dropdown-menu p-0 m-0 dropdown-menu-anim-up dropdown-menu-sm dropdown-menu-right" ngbDropdownMenu
+    aria-labelledby="navbarDropdownLanguage">
+    <!--begin::Nav-->
+    <ul class="navi navi-hover py-4">
+      <!--begin::Item-->
+      <li class="navi-item active">
+        <a ngbDropdownItem href="javascript:;" (click)="onLanguageSelected('pt')" class="navi-link">
+          <span class="symbol symbol-20 mr-3">
+            <img src="assets/media/svg/flags/011-brazil.svg" alt="" />
+          </span>
+          <span class="navi-text">{{ "MSG000080.descricao" | translate }}</span>
+        </a>
+      </li>
+      <!--end::Item-->
+      <!--begin::Item-->
+      <li class="navi-item">
+        <a ngbDropdownItem href="javascript:;" (click)="onLanguageSelected('en')" class="navi-link">
+          <span class="symbol symbol-20 mr-3">
+            <img src="assets/media/svg/flags/226-united-states.svg" alt="" />
+          </span>
+          <span class="navi-text">{{ "MSG000081.descricao" | translate }}</span>
+        </a>
+
+      <!--end::Item-->
+    </ul>
+    <!--end::Nav-->
+  </div>
+  <!--end::Dropdown-->
+</div>

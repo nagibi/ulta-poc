@@ -1,0 +1,143 @@
+<!-- <div class="card card-custom gutter-b">
+  <div class="card-body"> -->
+    <!-- <div class=""> -->
+      <!-- Total {{this.itensSelecionados.length}} -->
+
+      <div id="kt_datatable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+      
+        <div class="row">
+
+          <!-- <div class="col-sm-12 col-md-8">
+            <div class="dataTables_length" id="dataTable_length">
+              <label>
+                <div ngbDropdown class="d-inline-block">
+                  <button class="btn btn-outline-primary" ngbDropdownToggle>{{qtd}}</button>
+                  <div ngbDropdownMenu aria-labelledby="qtdRegistros">
+                    <button ngbDropdownItem (click)="onQtdRegistrosClick(1)">1</button>
+                    <button ngbDropdownItem (click)="onQtdRegistrosClick(10)">10</button>
+                    <button ngbDropdownItem (click)="onQtdRegistrosClick(25)">25</button>
+                    <button ngbDropdownItem (click)="onQtdRegistrosClick(50)">50</button>
+                    <button ngbDropdownItem (click)="onQtdRegistrosClick(-1)">Todos</button>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>-->
+          <!-- <div class="col-sm-12 col-md-4 text-right">
+            <div id="dataTable_filter" class="dataTables_filter">
+                  <div class="input-group mb-2">
+                    <input type="text" class="form-control" placeholder="Digite aqui" #search (keydown.enter)="onSearchClick(search.value); (false)" aria-label="Digite aqui" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary" type="button" (click)="onSearchClick(search.value)">Pesquisar</button>
+                    </div>
+                  </div>
+            </div>
+          </div> -->
+        </div> 
+        <div class="row table-responsive" style="min-height: 400px;">
+          <!-- <div class="splash-screen" >
+            <span class="text-primary font-weight-light">Processando... <i class="spinner spinner-track spinner-primary spinner-lg mr-15"></i></span>
+          </div> -->
+          <!-- <div id="divLoading" class="show" *ngIf=!gridService.isSearchComplete>
+            <div id="loadinggif" class="show">
+              <span class="spinner spinner-track spinner-success spinner-lg mr-15"></span>
+            </div>
+          </div> -->
+          <div id="overlay" *ngIf=!gridService.isSearchComplete> 
+            <div id="loadinggif" class="show">
+            <span class="font-weight-bold">{{ "MSG000199.descricao" | translate }} <i class="spinner spinner-primary mr-15"></i></span> 
+          </div></div>
+
+
+          <div class="col-md-12">
+            <table class="table table-separate table-head-custom table-foot-custom table-checkable dataTable dtr-inline" id="dataTable" width="100%" cellspacing="0" role="grid"
+              aria-describedby="dataTable_info" style="width: 100%;">
+              <thead>
+                <tr role="row">
+                  <th *ngIf="!gridService.gridOptions.isCheckbox" style="text-align:center; width:40px">
+                    <!-- <span class="switch switch-sm switch-primary">
+											<label>
+												<input type="checkbox" [(ngModel)]=checkAll (click)=selectAll() name="select"/>
+                        <span *ngIf="!gridService.gridOptions.isCheckboxAll">#</span>
+											</label>
+                    </span> -->
+                    <label class="checkbox checkbox-rounded checkbox-lg">
+                      <input type="checkbox" [(ngModel)]=checkAll (change)=selectAll()>
+                      <span></span></label>
+                  </th>
+                  <ng-container *ngFor="let colum of gridService.gridOptions.columns; let i = index">
+                    <th [attr.title]="colum.sortable && colum.title + ' ' + colum.label " *ngIf="colum.isVisible != false ? true : colum.isVisible" [ngClass]="colum.sortableStr == 'asc' ? 'sorting_asc' : colum.sortableStr == 'desc' ? 'sorting_desc' : colum.sortable && 'sorting'" (click)="colum.sortable && gridService.order(colum)" [ngStyle]="{'text-align':colum.align}">
+                      {{colum.label}}
+                      <ng-container *ngIf=colum.sortable>
+                        <i *ngIf="colum.sortableStr === 'desc'" class="flaticon2-arrow-up icon-sm text-primary"></i>                    
+                        <i *ngIf="colum.sortableStr === 'asc'" class="flaticon2-arrow-down icon-sm text-primary"></i>                    
+                      </ng-container>
+                    </th>
+                  </ng-container>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let obj of data; let i = index" id="{{i}}" role="row">
+                  <td *ngIf="!gridService.gridOptions.isCheckbox" style="text-align:center; vertical-align:middle">
+                    <label class="checkbox checkbox-rounded checkbox-lg">
+                      <input type="checkbox" checked="checked" [checked]=obj.checked (change)="onToggleSelectItem(--i)"/>
+                      <span></span></label>
+                    <!-- <span class="switch switch-sm switch-primary">
+											<label>
+												<input type="checkbox" name="select" [checked]=obj.checked (change)="onToggleSelectItem(--i)"/>
+												<span></span>
+											</label>
+										</span> -->
+                  </td>
+                  <ng-container *ngFor="let colum of gridService.gridOptions.columns; let j = index">
+                  <td *ngIf="gridService.gridOptions.columns[j].isVisible != false ? true : colum.isVisible" [ngStyle]="{'text-align':gridService.gridOptions.columns[j].align,'cursor':editText && 'pointer'}" [attr.title]="editText" (click)="rowClick(obj)" >
+                    <span [innerHTML]=obj[colum.fakeField]></span>
+                    <ng-container *ngFor="let button of colum.actions">
+                      <button *ngIf="button.visible" type="button" (click)=button.click(obj) [ngClass]=button.type class="btn btn-sm btn-clean btn-icon mr-2" [attr.title]="button.title != null ? button.title : button.text"><i *ngIf=button.icon [ngClass]=button.icon aria-hidden="true"></i> {{button.text}}</button>
+                    </ng-container>
+ 
+                  </td>
+                </ng-container>
+             
+                </tr>
+              </tbody>
+            </table>
+            <p class="text-center" *ngIf="gridService.model && !gridService.model.length">Nehum registro encontrado</p>
+          </div>
+        </div>
+        <div class="row" >
+          <div class="col-sm-12 col-md-5">
+            <div class="dataTables_info" id="dataTable_info" role="status" aria-live="polite">
+              {{ "MSG000168.descricao" | translate }} {{gridService.pageCurrent*gridService.qtdRegistros}} {{ "MSG000169.descricao" | translate }} {{ gridService.total < gridService.pageCurrent*gridService.qtdRegistros+gridService.qtdRegistros ? gridService.total : gridService.pageCurrent*gridService.qtdRegistros+gridService.qtdRegistros}} {{ "MSG000170.descricao" | translate }} {{gridService.total}} {{ "MSG000171.descricao" | translate }}
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-7" *ngIf=gridService.gridOptions.isPaginate>
+           
+            <div class="dataTables_paginate paging_simple_numbers float-right" id="dataTable_paginate">
+              <ul class="pagination">
+                <li>
+                  <a [ngClass]="{'disabled': gridService.pageCurrent == 0}"class="btn font-weight-bold py-2 px-5 ml-2 btn-light-primary" (click)="onBtnPrevClick()" [attr.title]="'MSG000164.descricao' | translate">{{ "MSG000164.descricao" | translate }}</a>
+                </li>
+                <li>
+                  <a [ngClass]="{'disabled' :gridService.pageCurrent+1 >= gridService.pageTotal}" class="btn font-weight-bold py-2 px-5 ml-2 btn-light-primary" (click)="onBtnNextClick()" [attr.title]="'MSG000163.descricao' | translate">{{ "MSG000163.descricao" | translate }}</a>
+                </li>
+              </ul>
+            </div>
+            <label class=" float-right">
+              <div ngbDropdown class="d-inline-block">
+                <button class="btn font-weight-bold py-2 px-5 ml-2 btn-light-primary" ngbDropdownToggle [attr.title]="'MSG000165.descricao' | translate">{{qtd}}</button>
+                <div ngbDropdownMenu aria-labelledby="qtdRegistros">
+                  <button ngbDropdownItem (click)="onQtdRegistrosClick(1)" title="1">1</button>
+                  <button ngbDropdownItem (click)="onQtdRegistrosClick(10)" title="10">10</button>
+                  <button ngbDropdownItem (click)="onQtdRegistrosClick(25)" title="25">25</button>
+                  <button ngbDropdownItem (click)="onQtdRegistrosClick(50)" title="50">50</button>
+                  <button ngbDropdownItem (click)="onQtdRegistrosClick(-1)" [attr.title]="'MSG000166.descricao' | translate">Todos</button>
+                </div>
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
+    <!-- </div> -->
+  <!-- </div>
+</div> -->

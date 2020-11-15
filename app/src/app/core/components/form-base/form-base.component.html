@@ -1,0 +1,23 @@
+<div class="separator separator-dashed my-10"></div>
+<div class="form-group row">
+  <div class="col-lg-3">
+    <label>Usuário criação</label>
+    <input disabled type="text" class="form-control" value="{{model['usuarioCriacao']}}"
+      [placeholder]="'MSG000017.descricao' | translate">
+  </div>
+  <div class="col-lg-3" >
+    <label>Data criação</label>
+    <input disabled type="text" class="form-control" value="{{model['dataCriacao'] | date: 'dd/MM/yyyy hh:mm:ss' }}"
+      [placeholder]="'MSG000017.descricao' | translate">
+  </div>
+  <div class="col-lg-3">
+    <label>Usuário atualização</label>
+    <input disabled type="text" class="form-control"  value="{{model['usuarioAtualizacao']}}" 
+    [placeholder]="'MSG000017.descricao' | translate">
+  </div>
+  <div class="col-lg-3" >
+    <label>Data atualização</label>
+    <input disabled type="text" class="form-control" value="{{model['dataAtualizacao'] | date: 'dd/MM/yyyy hh:mm:ss' }}"
+      [placeholder]="'MSG000017.descricao' | translate">
+  </div>
+</div>

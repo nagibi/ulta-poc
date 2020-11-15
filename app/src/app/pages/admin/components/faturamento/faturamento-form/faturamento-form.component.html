@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-md-12">
+    <app-card>
+      <!--begin::Form-->
+      <form class="form" novalidate="novalidate" [formGroup]="form" (ngSubmit)="salvar()"
+        (keydown.enter)="salvar(); (false)">
+        <div class="card-body">
+          <div class="col-lg-6">
+            <label>Documento</label>
+            <input type="file" class="form-control" [ngClass]="{'is-invalid': isControlInvalid('file')}"
+              formControlName="file" multiple [placeholder]="'MSG000017.descricao' | translate" autocomplete="off" (change)="onFileChange($event)">
+            <div *ngIf="isControlHasError('file', 'required')" class="invalid-feedback">
+              <p>{{ "MSG000073.descricao" | translate }}</p>
+            </div>
+            <div *ngIf="isControlHasError('file', 'error')" class="invalid-feedback">
+              <p>{{msgsError['file']}}</p>
+            </div>
+          </div>
+          <!-- <input formControlName="file" id="file" type="file" multiple class="form-control" (change)="onFileChange($event)"> -->
+        </div>
+        <div class="card-footer bg-gray-100">
+          <button type="reset" id="kt_reset" [attr.title]="'MSG000014.descricao' | translate"
+            class="btn btn-secondary btn-secondary--icon" (click)=cancelar()><span>
+              <i class="la la-close"></i>
+              <span>{{ "MSG000014.descricao" | translate }}</span>
+            </span></button>
+        </div>
+      </form>
+    </app-card>
+  </div>

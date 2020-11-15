@@ -1,0 +1,81 @@
+<!-- <div class="card card-custom" data-card="true" id="kt_card_3"> -->
+  <!-- <div class="card-header" #ref> -->
+    <!-- <ng-content select="[card-header]"></ng-content> -->
+    <!-- <div class="card-title">
+      <span class="card-icon">
+        <i class="flaticon2-chat-1 text-primary"></i>
+      </span>
+      <h3 class="card-label">Card Footer
+        <small>sub title</small></h3>
+    </div>
+    <div class="card-toolbar">
+      <a href="#" class="btn btn-icon btn-circle btn-sm btn-light-primary mr-1" data-card-tool="toggle">
+        <i class="ki ki-arrow-down icon-nm"></i>
+      </a>
+      <a href="#" class="btn btn-icon btn-circle btn-sm btn-light-success mr-1" data-card-tool="reload">
+        <i class="ki ki-reload icon-nm"></i>
+      </a>
+      <a href="#" class="btn btn-icon btn-circle btn-sm btn-light-danger" data-card-tool="remove">
+        <i class="ki ki-close icon-nm"></i>
+      </a>
+    </div> -->
+  <!-- </div> -->
+  <!-- <div class="card-body"> -->
+    <!-- <ng-content select="[card-body]"></ng-content> -->
+  <!-- </div> -->
+  <!-- <div class="card-footer d-flex justify-content-between"> -->
+    <!-- <ng-content select="[card-footer]"></ng-content> -->
+    <!-- <a href="#" class="btn btn-light-primary font-weight-bold">Manage</a>
+    <a href="#" class="btn btn-outline-secondary font-weight-bold">Learn more</a> -->
+  <!-- </div> -->
+<!-- </div> -->
+
+<div class="card card-custom" [ngClass]="bg? 'text-white ' + bg : ''">
+  <div *ngIf=isHeader class="card-header" [attr.title]="isCollapsed ? this.openText : this.closeText" style="cursor: pointer;" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed">
+    <div class="card-title">
+      <span *ngIf=icon class="card-icon">
+        <i class="text-primary" [ngClass]=icon></i>
+      </span>
+      <h3 class="card-label" *ngIf=text>{{text}}
+      <small *ngIf=subtitle>{{subtitle}}</small></h3>
+    </div>
+    <div class="card-toolbar">
+      <button class="btn text-primary mr-1" 
+            aria-controls="collapseExample"><i class="fa  "
+              [ngClass]="isCollapsed ? 'fa-angle-up':'fa-angle-down'"></i></button>
+
+              
+      <!-- <a href="#" class="btn btn-sm btn-icon btn-light-danger mr-2">
+        <i class="flaticon2-drop"></i>
+      </a>
+      <a href="#" class="btn btn-sm btn-icon btn-light-success mr-2">
+        <i class="flaticon2-gear"></i>
+      </a>
+      <a href="#" class="btn btn-sm btn-icon btn-light-primary">
+        <i class="flaticon2-bell-2"></i>
+      </a> -->
+    </div>
+  </div>
+  <!-- <div class="card-header">
+    <div class="row">
+      <div class="card-title"></div>
+      <div class="col-md-9">
+        <h6 [ngClass]="color">{{title}}</h6>
+      </div>
+      <div class="col-md-3">
+        <div class="float-right">
+          <button class="btn text-primary mr-1" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed"
+            aria-controls="collapseExample"><i class="fa  "
+              [ngClass]="isCollapsed ? 'fa-angle-up':'fa-angle-down'"></i></button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+    <div id="collapseExample" [ngbCollapse]="isCollapsed">
+      <ng-content></ng-content>
+    </div>
+    <!-- <div class="card-footer" *ngIf=actions>
+      <span [innerHTML]=actions></span>
+    </div> -->
+  </div>

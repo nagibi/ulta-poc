@@ -1,0 +1,25 @@
+<!-- alert-->
+<div style="position: fixed; margin-top: -54px !important; z-index: 96; width: 100%; ">
+  <div class="alert alert-custom" *ngFor="let alert of alerts" [ngClass]="alert.type" style="height: 54px; border-radius: 0%; margin-bottom: 0;" role="alert">
+    <div class="alert-icon"><fa-icon [icon]="alert.icon"></fa-icon></div>
+    <div class="alert-text"><span [innerHTML]="alert.text"></span></div>
+    <div class="alert-close">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="onRemoveAlert(alert)">
+        <span aria-hidden="true">
+          <i class="ki ki-close"></i>
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- <div id="toast-container" class="toast-top-right">
+  <div class="toast toast-success" aria-live="polite" style="">
+    <button type="button" class="toast-close-button"
+      role="button">×</button>
+    <div class="toast-title">fdsfdsfds</div>
+    <div class="toast-message">dsfdsfdsfs</div>
+  </div>
+</div> -->
+
+<!--end alert-->

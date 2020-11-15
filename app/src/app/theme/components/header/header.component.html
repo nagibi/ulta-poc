@@ -1,0 +1,602 @@
+<div id="kt_header" class="header header-fixed">
+  <!--begin::Container-->
+  <div class="container-fluid d-flex align-items-stretch justify-content-between">
+    <!--begin::Header Menu Wrapper-->
+    <div class="header-menu-wrapper header-menu-wrapper-left" id="kt_header_menu_wrapper">
+      <!--begin::Header Logo-->
+      <div class="header-logo">
+        <a routerLink="/admin/dashboard">
+          <img alt="Logo" src="assets/media/logos/logo-dark.png" />
+        </a>
+      </div>
+      <!--end::Header Logo-->
+      <!--begin::Header Menu-->
+      <div id="kt_header_menu" class="header-menu header-menu-mobile header-menu-layout-default">
+        <!--begin::Header Nav-->
+        <ul class="menu-nav">
+          <!-- DASHBOARD -->
+          <li class="menu-item menu-item-rel">
+            <a routerLink="/admin/dashboard" class="menu-link menu-toggle" [attr.title]="'MSG000053.descricao' | translate">
+              <span class="menu-text">{{ "MSG000053.descricao" | translate }}</span>
+            </a>
+          </li>
+          <!-- CONTROLE DE ACESSO -->
+          <li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="click" aria-haspopup="true" [permissao]="['usuario-obter','grupo-obter','funcionalidade-obter']">
+            <a href="javascript:;" class="menu-link menu-toggle" [attr.title]="'MSG000062.descricao' | translate">
+              <span class="menu-text">{{ "MSG000062.descricao" | translate }}</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="menu-submenu menu-submenu-classic menu-submenu-left">
+              <ul class="menu-subnav">
+                <!-- USUARIO -->
+                <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true" permissao [permissao]="['usuario-obter','usuario-cadastrar','usuario-atualizar']">
+                  <a href="javascript:;" class="menu-link menu-toggle" [attr.title]="'MSG000064.descricao' | translate">
+                    <span class="svg-icon menu-icon">
+                      <!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Send.svg-->
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                          <polygon points="0 0 24 0 24 24 0 24"/>
+                          <path d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"/>
+                          <path d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z" fill="#000000" fill-rule="nonzero"/>
+                      </g>
+                      </svg>
+                      <!--end::Svg Icon-->
+                    </span>
+                    <span class="menu-text">{{ "MSG000064.descricao" | translate }}</span>
+                    <i class="menu-arrow"></i>
+                  </a>
+                  <div class="menu-submenu menu-submenu-classic menu-submenu-right">
+                    <ul class="menu-subnav">
+                      <li class="menu-item" aria-haspopup="true">
+                        <a routerLink="/admin/usuario" class="menu-link" [attr.title]="'MSG000229.descricao' | translate">
+                          <i class="menu-bullet menu-bullet-dot">
+                            <span></span>
+                          </i>
+                          <span class="menu-text">{{ "MSG000229.descricao" | translate }}</span>
+                        </a>
+                      </li>
+                      <li class="menu-item" aria-haspopup="true" permissao [permissao]="['usuario-cadastrar']">
+                        <a routerLink="/admin/usuario/novo" class="menu-link" [attr.title]="'MSG000228.descricao' | translate">
+                          <i class="menu-bullet menu-bullet-dot">
+                            <span></span>
+                          </i>
+                          <span class="menu-text">{{ "MSG000228.descricao" | translate }}</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <!-- GRUPO -->
+                <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true" permissao permissao [permissao]="['grupo-obter','grupo-cadastrar','grupo-atualizar']">
+                  <a href="javascript:;" class="menu-link menu-toggle"  [attr.title]="'MSG000056.descricao' | translate">
+                    <span class="svg-icon menu-icon">
+                      <!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Send.svg-->
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                          <polygon points="0 0 24 0 24 24 0 24"/>
+                          <path d="M18,14 C16.3431458,14 15,12.6568542 15,11 C15,9.34314575 16.3431458,8 18,8 C19.6568542,8 21,9.34314575 21,11 C21,12.6568542 19.6568542,14 18,14 Z M9,11 C6.790861,11 5,9.209139 5,7 C5,4.790861 6.790861,3 9,3 C11.209139,3 13,4.790861 13,7 C13,9.209139 11.209139,11 9,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"/>
+                          <path d="M17.6011961,15.0006174 C21.0077043,15.0378534 23.7891749,16.7601418 23.9984937,20.4 C24.0069246,20.5466056 23.9984937,21 23.4559499,21 L19.6,21 C19.6,18.7490654 18.8562935,16.6718327 17.6011961,15.0006174 Z M0.00065168429,20.1992055 C0.388258525,15.4265159 4.26191235,13 8.98334134,13 C13.7712164,13 17.7048837,15.2931929 17.9979143,20.2 C18.0095879,20.3954741 17.9979143,21 17.2466999,21 C13.541124,21 8.03472472,21 0.727502227,21 C0.476712155,21 -0.0204617505,20.45918 0.00065168429,20.1992055 Z" fill="#000000" fill-rule="nonzero"/>
+                      </g>
+                      </svg>
+                      <!--end::Svg Icon-->
+                    </span>
+                    <span class="menu-text">{{ "MSG000056.descricao" | translate }}</span>
+                    <i class="menu-arrow"></i>
+                  </a>
+                  <div class="menu-submenu menu-submenu-classic menu-submenu-right">
+                    <ul class="menu-subnav">
+                      <li class="menu-item" aria-haspopup="true">
+                        <a routerLink="/admin/grupo" class="menu-link" [attr.title]="'MSG000229.descricao' | translate">
+                          <i class="menu-bullet menu-bullet-dot">
+                            <span></span>
+                          </i>
+                          <span class="menu-text">{{ "MSG000229.descricao" | translate }}</span>
+                        </a>
+                      </li>
+                      <li class="menu-item" aria-haspopup="true" permissao [permissao]="['usuario-cadastrar']">
+                        <a routerLink="/admin/grupo/novo" class="menu-link" [attr.title]="'MSG000228.descricao' | translate">
+                          <i class="menu-bullet menu-bullet-dot">
+                            <span></span>
+                          </i>
+                          <span class="menu-text">{{ "MSG000228.descricao" | translate }}</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <!-- FUNCIONALIDADES -->
+                <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true" permissao [permissao]="['funcionalidade-obter','funcionalidade-cadastrar','funcionalidade-atualizar']">
+                  <a href="javascript:;" class="menu-link menu-toggle" [attr.title]="'MSG000057.descricao' | translate">
+                    <span class="svg-icon menu-icon">
+                      <!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Send.svg-->
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                          <rect x="0" y="0" width="24" height="24"/>
+                          <path d="M8,3 L8,3.5 C8,4.32842712 8.67157288,5 9.5,5 L14.5,5 C15.3284271,5 16,4.32842712 16,3.5 L16,3 L18,3 C19.1045695,3 20,3.8954305 20,5 L20,21 C20,22.1045695 19.1045695,23 18,23 L6,23 C4.8954305,23 4,22.1045695 4,21 L4,5 C4,3.8954305 4.8954305,3 6,3 L8,3 Z" fill="#000000" opacity="0.3"/>
+                          <path d="M11,2 C11,1.44771525 11.4477153,1 12,1 C12.5522847,1 13,1.44771525 13,2 L14.5,2 C14.7761424,2 15,2.22385763 15,2.5 L15,3.5 C15,3.77614237 14.7761424,4 14.5,4 L9.5,4 C9.22385763,4 9,3.77614237 9,3.5 L9,2.5 C9,2.22385763 9.22385763,2 9.5,2 L11,2 Z" fill="#000000"/>
+                          <rect fill="#000000" opacity="0.3" x="10" y="9" width="7" height="2" rx="1"/>
+                          <rect fill="#000000" opacity="0.3" x="7" y="9" width="2" height="2" rx="1"/>
+                          <rect fill="#000000" opacity="0.3" x="7" y="13" width="2" height="2" rx="1"/>
+                          <rect fill="#000000" opacity="0.3" x="10" y="13" width="7" height="2" rx="1"/>
+                          <rect fill="#000000" opacity="0.3" x="7" y="17" width="2" height="2" rx="1"/>
+                          <rect fill="#000000" opacity="0.3" x="10" y="17" width="7" height="2" rx="1"/>
+                      </g>
+                      </svg>
+                      <!--end::Svg Icon-->
+                    </span>
+                    <span class="menu-text">{{ "MSG000057.descricao" | translate }}</span>
+                    <i class="menu-arrow"></i>
+                  </a>
+                  <div class="menu-submenu menu-submenu-classic menu-submenu-right">
+                    <ul class="menu-subnav">
+                      <li class="menu-item" aria-haspopup="true">
+                        <a routerLink="/admin/funcionalidade" class="menu-link" [attr.title]="'MSG000229.descricao' | translate">
+                          <i class="menu-bullet menu-bullet-dot">
+                            <span></span>
+                          </i>
+                          <span class="menu-text">{{ "MSG000229.descricao" | translate }}</span>
+                        </a>
+                      </li>
+                      <li class="menu-item" aria-haspopup="true" permissao [permissao]="['funcionalidade-cadastrar']">
+                        <a routerLink="/admin/funcionalidade/novo" class="menu-link" [attr.title]="'MSG000228.descricao' | translate">
+                          <i class="menu-bullet menu-bullet-dot">
+                            <span></span>
+                          </i>
+                          <span class="menu-text">{{ "MSG000228.descricao" | translate }}</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+          </li>
+          <!-- CONFIGURACOES -->
+          <li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="click" aria-haspopup="true" permissao [permissao]="['usuario-obter']">
+            <a href="javascript:;" class="menu-link menu-toggle" [attr.title]="'MSG000054.descricao' | translate">
+              <span class="menu-text">{{ "MSG000054.descricao" | translate }}</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="menu-submenu menu-submenu-classic menu-submenu-left">
+              <ul class="menu-subnav">
+                <!-- TEMPLATE DE EMAIL -->
+                <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true" permissao [permissao]="['templateEmail-obter','templateEmail-cadastrar','templateEmail-atualizar']">
+                  <a href="javascript:;" class="menu-link menu-toggle" [attr.title]="'MSG000058.descricao' | translate">
+                    <span class="svg-icon menu-icon">
+                      <!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Send.svg-->
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                          <rect x="0" y="0" width="24" height="24"/>
+                          <path d="M5,9 L19,9 C20.1045695,9 21,9.8954305 21,11 L21,20 C21,21.1045695 20.1045695,22 19,22 L5,22 C3.8954305,22 3,21.1045695 3,20 L3,11 C3,9.8954305 3.8954305,9 5,9 Z M18.1444251,10.8396467 L12,14.1481833 L5.85557487,10.8396467 C5.4908718,10.6432681 5.03602525,10.7797221 4.83964668,11.1444251 C4.6432681,11.5091282 4.77972206,11.9639747 5.14442513,12.1603533 L11.6444251,15.6603533 C11.8664074,15.7798822 12.1335926,15.7798822 12.3555749,15.6603533 L18.8555749,12.1603533 C19.2202779,11.9639747 19.3567319,11.5091282 19.1603533,11.1444251 C18.9639747,10.7797221 18.5091282,10.6432681 18.1444251,10.8396467 Z" fill="#000000"/>
+                          <path d="M11.1288761,0.733697713 L11.1288761,2.69017121 L9.12120481,2.69017121 C8.84506244,2.69017121 8.62120481,2.91402884 8.62120481,3.19017121 L8.62120481,4.21346991 C8.62120481,4.48961229 8.84506244,4.71346991 9.12120481,4.71346991 L11.1288761,4.71346991 L11.1288761,6.66994341 C11.1288761,6.94608579 11.3527337,7.16994341 11.6288761,7.16994341 C11.7471877,7.16994341 11.8616664,7.12798964 11.951961,7.05154023 L15.4576222,4.08341738 C15.6683723,3.90498251 15.6945689,3.58948575 15.5161341,3.37873564 C15.4982803,3.35764848 15.4787093,3.33807751 15.4576222,3.32022374 L11.951961,0.352100892 C11.7412109,0.173666017 11.4257142,0.199862688 11.2472793,0.410612793 C11.1708299,0.500907473 11.1288761,0.615386087 11.1288761,0.733697713 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(11.959697, 3.661508) rotate(-270.000000) translate(-11.959697, -3.661508) "/>
+                      </g>
+                      </svg>
+                      <!--end::Svg Icon-->
+                    </span>
+                    <span class="menu-text">{{ "MSG000058.descricao" | translate }}</span>
+                    <i class="menu-arrow"></i>
+                  </a>
+                  <div class="menu-submenu menu-submenu-classic menu-submenu-right">
+                    <ul class="menu-subnav">
+                      <li class="menu-item" aria-haspopup="true">
+                        <a routerLink="/admin/template-email" class="menu-link" [attr.title]="'MSG000229.descricao' | translate">
+                          <i class="menu-bullet menu-bullet-dot">
+                            <span></span>
+                          </i>
+                          <span class="menu-text">{{ "MSG000229.descricao" | translate }}</span>
+                        </a>
+                      </li>
+                      <li class="menu-item" aria-haspopup="true" permissao [permissao]="['templateEmail-cadastrar']">
+                        <a routerLink="/admin/template-email/novo" class="menu-link" [attr.title]="'MSG000228.descricao' | translate">
+                          <i class="menu-bullet menu-bullet-dot">
+                            <span></span>
+                          </i>
+                          <span class="menu-text">{{ "MSG000228.descricao" | translate }}</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                  <!-- ARQUIVOS -->
+                  <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true" permissao [permissao]="['arquivo-obter','arquivo-cadastrar','arquivo-atualizar']">
+                    <a href="javascript:;" class="menu-link menu-toggle" [attr.title]="'MSG000230.descricao' | translate">
+                      <span class="svg-icon menu-icon">
+                        <!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Send.svg-->
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <rect x="0" y="0" width="24" height="24"/>
+                            <path d="M8,3 L8,3.5 C8,4.32842712 8.67157288,5 9.5,5 L14.5,5 C15.3284271,5 16,4.32842712 16,3.5 L16,3 L18,3 C19.1045695,3 20,3.8954305 20,5 L20,21 C20,22.1045695 19.1045695,23 18,23 L6,23 C4.8954305,23 4,22.1045695 4,21 L4,5 C4,3.8954305 4.8954305,3 6,3 L8,3 Z" fill="#000000" opacity="0.3"/>
+                            <path d="M11,2 C11,1.44771525 11.4477153,1 12,1 C12.5522847,1 13,1.44771525 13,2 L14.5,2 C14.7761424,2 15,2.22385763 15,2.5 L15,3.5 C15,3.77614237 14.7761424,4 14.5,4 L9.5,4 C9.22385763,4 9,3.77614237 9,3.5 L9,2.5 C9,2.22385763 9.22385763,2 9.5,2 L11,2 Z" fill="#000000"/>
+                            <rect fill="#000000" opacity="0.3" x="10" y="9" width="7" height="2" rx="1"/>
+                            <rect fill="#000000" opacity="0.3" x="7" y="9" width="2" height="2" rx="1"/>
+                            <rect fill="#000000" opacity="0.3" x="7" y="13" width="2" height="2" rx="1"/>
+                            <rect fill="#000000" opacity="0.3" x="10" y="13" width="7" height="2" rx="1"/>
+                            <rect fill="#000000" opacity="0.3" x="7" y="17" width="2" height="2" rx="1"/>
+                            <rect fill="#000000" opacity="0.3" x="10" y="17" width="7" height="2" rx="1"/>
+                        </g>
+                        </svg>
+                        <!--end::Svg Icon-->
+                      </span>
+                      <span class="menu-text">{{ "MSG000230.descricao" | translate }}</span>
+                      <i class="menu-arrow"></i>
+                    </a>
+                    <div class="menu-submenu menu-submenu-classic menu-submenu-right">
+                      <ul class="menu-subnav">
+                        <li class="menu-item" aria-haspopup="true">
+                          <a routerLink="/admin/arquivo" class="menu-link" [attr.title]="'MSG000229.descricao' | translate">
+                            <i class="menu-bullet menu-bullet-dot">
+                              <span></span>
+                            </i>
+                            <span class="menu-text">{{ "MSG000229.descricao" | translate }}</span>
+                          </a>
+                        </li>
+                        <li class="menu-item" aria-haspopup="true" permissao [permissao]="['arquivo-cadastrar']">
+                          <a routerLink="/admin/arquivo/novo" class="menu-link" [attr.title]="'MSG000230.descricao' | translate">
+                            <i class="menu-bullet menu-bullet-dot">
+                              <span></span>
+                            </i>
+                            <span class="menu-text">{{ "MSG000230.descricao" | translate }}</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <!-- DOCUMENTOS -->
+                  <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true" permissao [permissao]="['documento-obter','documento-cadastrar','documento-atualizar']">
+                    <a href="javascript:;" class="menu-link menu-toggle" [attr.title]="'MSG000261.descricao' | translate">
+                      <span class="svg-icon menu-icon">
+                        <!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Send.svg-->
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <rect x="0" y="0" width="24" height="24"/>
+                            <path d="M5.85714286,2 L13.7364114,2 C14.0910962,2 14.4343066,2.12568431 14.7051108,2.35473959 L19.4686994,6.3839416 C19.8056532,6.66894833 20,7.08787823 20,7.52920201 L20,20.0833333 C20,21.8738751 19.9795521,22 18.1428571,22 L5.85714286,22 C4.02044787,22 4,21.8738751 4,20.0833333 L4,3.91666667 C4,2.12612489 4.02044787,2 5.85714286,2 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"/>
+                            <path d="M8.95128003,13.8153448 L10.9077535,13.8153448 L10.9077535,15.8230161 C10.9077535,16.0991584 11.1316112,16.3230161 11.4077535,16.3230161 L12.4310522,16.3230161 C12.7071946,16.3230161 12.9310522,16.0991584 12.9310522,15.8230161 L12.9310522,13.8153448 L14.8875257,13.8153448 C15.1636681,13.8153448 15.3875257,13.5914871 15.3875257,13.3153448 C15.3875257,13.1970331 15.345572,13.0825545 15.2691225,12.9922598 L12.3009997,9.48659872 C12.1225648,9.27584861 11.8070681,9.24965194 11.596318,9.42808682 C11.5752308,9.44594059 11.5556598,9.46551156 11.5378061,9.48659872 L8.56968321,12.9922598 C8.39124833,13.2030099 8.417445,13.5185067 8.62819511,13.6969416 C8.71848979,13.773391 8.8329684,13.8153448 8.95128003,13.8153448 Z" fill="#000000"/>
+                        </g>
+                        </svg>
+                        <!--end::Svg Icon-->
+                      </span>
+                      <span class="menu-text">{{ "MSG000261.descricao" | translate }}</span>
+                      <i class="menu-arrow"></i>
+                    </a>
+                    <div class="menu-submenu menu-submenu-classic menu-submenu-right">
+                      <ul class="menu-subnav">
+                        <li class="menu-item" aria-haspopup="true">
+                          <a routerLink="/admin/documento" class="menu-link" [attr.title]="'MSG000229.descricao' | translate">
+                            <i class="menu-bullet menu-bullet-dot">
+                              <span></span>
+                            </i>
+                            <span class="menu-text">{{ "MSG000229.descricao" | translate }}</span>
+                          </a>
+                        </li>
+                        <li class="menu-item" aria-haspopup="true" permissao [permissao]="['documento-cadastrar']">
+                          <a routerLink="/admin/documento/novo" class="menu-link" [attr.title]="'MSG000228.descricao' | translate">
+                            <i class="menu-bullet menu-bullet-dot">
+                              <span></span>
+                            </i>
+                            <span class="menu-text">{{ "MSG000228.descricao" | translate }}</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <!-- FATURAMENTO -->
+                  <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true" permissao [permissao]="['faturamento-obter','faturamento-cadastrar','faturamento-atualizar']">
+                    <a routerLink="/admin/faturamento" class="menu-link menu-toggle" [attr.title]="'MSG000273.descricao' | translate">
+                      <span class="svg-icon menu-icon">
+                        <!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Send.svg-->
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <rect x="0" y="0" width="24" height="24"/>
+                            <path d="M2,6 L21,6 C21.5522847,6 22,6.44771525 22,7 L22,17 C22,17.5522847 21.5522847,18 21,18 L2,18 C1.44771525,18 1,17.5522847 1,17 L1,7 C1,6.44771525 1.44771525,6 2,6 Z M11.5,16 C13.709139,16 15.5,14.209139 15.5,12 C15.5,9.790861 13.709139,8 11.5,8 C9.290861,8 7.5,9.790861 7.5,12 C7.5,14.209139 9.290861,16 11.5,16 Z" fill="#000000" opacity="0.3" transform="translate(11.500000, 12.000000) rotate(-345.000000) translate(-11.500000, -12.000000) "/>
+                            <path d="M2,6 L21,6 C21.5522847,6 22,6.44771525 22,7 L22,17 C22,17.5522847 21.5522847,18 21,18 L2,18 C1.44771525,18 1,17.5522847 1,17 L1,7 C1,6.44771525 1.44771525,6 2,6 Z M11.5,16 C13.709139,16 15.5,14.209139 15.5,12 C15.5,9.790861 13.709139,8 11.5,8 C9.290861,8 7.5,9.790861 7.5,12 C7.5,14.209139 9.290861,16 11.5,16 Z M11.5,14 C12.6045695,14 13.5,13.1045695 13.5,12 C13.5,10.8954305 12.6045695,10 11.5,10 C10.3954305,10 9.5,10.8954305 9.5,12 C9.5,13.1045695 10.3954305,14 11.5,14 Z" fill="#000000"/>
+                                            </g>
+                        </svg>
+                        <!--end::Svg Icon-->
+                      </span>
+                      <span class="menu-text">{{ "MSG000273.descricao" | translate }}</span>
+                    </a>
+                  </li>
+                   <!-- DEMONSTRATIVO -->
+                   <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true" permissao [permissao]="['demonstrativo-faturamento-obter','demonstrativo-faturamento-cadastrar','demonstrativo-faturamento-atualizar']">
+                    <a routerLink="/admin/demonstrativo-faturamento" class="menu-link menu-toggle" [attr.title]="'MSG000284.descricao' | translate">
+                      <span class="svg-icon menu-icon">
+                        <!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Send.svg-->
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <rect x="0" y="0" width="24" height="24"/>
+                            <path d="M2,6 L21,6 C21.5522847,6 22,6.44771525 22,7 L22,17 C22,17.5522847 21.5522847,18 21,18 L2,18 C1.44771525,18 1,17.5522847 1,17 L1,7 C1,6.44771525 1.44771525,6 2,6 Z M11.5,16 C13.709139,16 15.5,14.209139 15.5,12 C15.5,9.790861 13.709139,8 11.5,8 C9.290861,8 7.5,9.790861 7.5,12 C7.5,14.209139 9.290861,16 11.5,16 Z" fill="#000000" opacity="0.3" transform="translate(11.500000, 12.000000) rotate(-345.000000) translate(-11.500000, -12.000000) "/>
+                            <path d="M2,6 L21,6 C21.5522847,6 22,6.44771525 22,7 L22,17 C22,17.5522847 21.5522847,18 21,18 L2,18 C1.44771525,18 1,17.5522847 1,17 L1,7 C1,6.44771525 1.44771525,6 2,6 Z M11.5,16 C13.709139,16 15.5,14.209139 15.5,12 C15.5,9.790861 13.709139,8 11.5,8 C9.290861,8 7.5,9.790861 7.5,12 C7.5,14.209139 9.290861,16 11.5,16 Z M11.5,14 C12.6045695,14 13.5,13.1045695 13.5,12 C13.5,10.8954305 12.6045695,10 11.5,10 C10.3954305,10 9.5,10.8954305 9.5,12 C9.5,13.1045695 10.3954305,14 11.5,14 Z" fill="#000000"/>
+                                            </g>
+                        </svg>
+                        <!--end::Svg Icon-->
+                      </span>
+                      <span class="menu-text">{{ "MSG000284.descricao" | translate }}</span>
+                    </a>
+                  </li>
+                    <!-- BAIRRO -->
+                    <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true" permissao [permissao]="['bairro-obter','bairro-cadastrar','bairro-atualizar']">
+                      <a href="javascript:;" class="menu-link menu-toggle" [attr.title]="'MSG000225.descricao' | translate">
+                        <span class="svg-icon menu-icon">
+                          <!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Send.svg-->
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                              <rect x="0" y="0" width="24" height="24"/>
+                              <path d="M8,3 L8,3.5 C8,4.32842712 8.67157288,5 9.5,5 L14.5,5 C15.3284271,5 16,4.32842712 16,3.5 L16,3 L18,3 C19.1045695,3 20,3.8954305 20,5 L20,21 C20,22.1045695 19.1045695,23 18,23 L6,23 C4.8954305,23 4,22.1045695 4,21 L4,5 C4,3.8954305 4.8954305,3 6,3 L8,3 Z" fill="#000000" opacity="0.3"/>
+                              <path d="M11,2 C11,1.44771525 11.4477153,1 12,1 C12.5522847,1 13,1.44771525 13,2 L14.5,2 C14.7761424,2 15,2.22385763 15,2.5 L15,3.5 C15,3.77614237 14.7761424,4 14.5,4 L9.5,4 C9.22385763,4 9,3.77614237 9,3.5 L9,2.5 C9,2.22385763 9.22385763,2 9.5,2 L11,2 Z" fill="#000000"/>
+                              <rect fill="#000000" opacity="0.3" x="10" y="9" width="7" height="2" rx="1"/>
+                              <rect fill="#000000" opacity="0.3" x="7" y="9" width="2" height="2" rx="1"/>
+                              <rect fill="#000000" opacity="0.3" x="7" y="13" width="2" height="2" rx="1"/>
+                              <rect fill="#000000" opacity="0.3" x="10" y="13" width="7" height="2" rx="1"/>
+                              <rect fill="#000000" opacity="0.3" x="7" y="17" width="2" height="2" rx="1"/>
+                              <rect fill="#000000" opacity="0.3" x="10" y="17" width="7" height="2" rx="1"/>
+                          </g>
+                          </svg>
+                          <!--end::Svg Icon-->
+                        </span>
+                        <span class="menu-text">{{ "MSG000225.descricao" | translate }}</span>
+                        <i class="menu-arrow"></i>
+                      </a>
+                      <div class="menu-submenu menu-submenu-classic menu-submenu-right">
+                        <ul class="menu-subnav">
+                          <li class="menu-item" aria-haspopup="true">
+                            <a routerLink="/admin/bairro" class="menu-link" [attr.title]="'MSG000229.descricao' | translate">
+                              <i class="menu-bullet menu-bullet-dot">
+                                <span></span>
+                              </i>
+                              <span class="menu-text">{{ "MSG000229.descricao" | translate }}</span>
+                            </a>
+                          </li>
+                          <li class="menu-item" aria-haspopup="true" permissao [permissao]="['bairro-cadastrar']">
+                            <a routerLink="/admin/bairro/novo" class="menu-link" [attr.title]="'MSG000228.descricao' | translate">
+                              <i class="menu-bullet menu-bullet-dot">
+                                <span></span>
+                              </i>
+                              <span class="menu-text">{{ "MSG000228.descricao" | translate }}</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+              </ul>
+            </div>
+          </li>
+          <!-- <li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="click" aria-haspopup="true">
+            <a href="javascript:;" rou class="menu-link menu-toggle">
+              <span class="menu-text">Dashboard</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="menu-submenu menu-submenu-classic menu-submenu-left">
+              <ul class="menu-subnav">
+                <li class="menu-item" aria-haspopup="true">
+                  <a href="index.html" class="menu-link">
+                    <span class="svg-icon menu-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+                        height="24px" viewBox="0 0 24 24" version="1.1">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                          <rect x="0" y="0" width="24" height="24" />
+                          <path
+                            d="M5.84026576,8 L18.1597342,8 C19.1999115,8 20.0664437,8.79732479 20.1528258,9.83390904 L20.8194924,17.833909 C20.9112219,18.9346631 20.0932459,19.901362 18.9924919,19.9930915 C18.9372479,19.9976952 18.8818364,20 18.8264009,20 L5.1735991,20 C4.0690296,20 3.1735991,19.1045695 3.1735991,18 C3.1735991,17.9445645 3.17590391,17.889153 3.18050758,17.833909 L3.84717425,9.83390904 C3.93355627,8.79732479 4.80008849,8 5.84026576,8 Z M10.5,10 C10.2238576,10 10,10.2238576 10,10.5 L10,11.5 C10,11.7761424 10.2238576,12 10.5,12 L13.5,12 C13.7761424,12 14,11.7761424 14,11.5 L14,10.5 C14,10.2238576 13.7761424,10 13.5,10 L10.5,10 Z"
+                            fill="#000000" />
+                          <path
+                            d="M10,8 L8,8 L8,7 C8,5.34314575 9.34314575,4 11,4 L13,4 C14.6568542,4 16,5.34314575 16,7 L16,8 L14,8 L14,7 C14,6.44771525 13.5522847,6 13,6 L11,6 C10.4477153,6 10,6.44771525 10,7 L10,8 Z"
+                            fill="#000000" fill-rule="nonzero" opacity="0.3" />
+                        </g>
+                      </svg>
+                    </span>
+                    <span class="menu-text">My Account</span>
+                  </a>
+                </li>
+                <li class="menu-item" aria-haspopup="true">
+                  <a href="javascript:;" class="menu-link">
+                    <span class="svg-icon menu-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+                        height="24px" viewBox="0 0 24 24" version="1.1">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                          <rect x="0" y="0" width="24" height="24" />
+                          <path
+                            d="M2.56066017,10.6819805 L4.68198052,8.56066017 C5.26776695,7.97487373 6.21751442,7.97487373 6.80330086,8.56066017 L8.9246212,10.6819805 C9.51040764,11.267767 9.51040764,12.2175144 8.9246212,12.8033009 L6.80330086,14.9246212 C6.21751442,15.5104076 5.26776695,15.5104076 4.68198052,14.9246212 L2.56066017,12.8033009 C1.97487373,12.2175144 1.97487373,11.267767 2.56066017,10.6819805 Z M14.5606602,10.6819805 L16.6819805,8.56066017 C17.267767,7.97487373 18.2175144,7.97487373 18.8033009,8.56066017 L20.9246212,10.6819805 C21.5104076,11.267767 21.5104076,12.2175144 20.9246212,12.8033009 L18.8033009,14.9246212 C18.2175144,15.5104076 17.267767,15.5104076 16.6819805,14.9246212 L14.5606602,12.8033009 C13.9748737,12.2175144 13.9748737,11.267767 14.5606602,10.6819805 Z"
+                            fill="#000000" opacity="0.3" />
+                          <path
+                            d="M8.56066017,16.6819805 L10.6819805,14.5606602 C11.267767,13.9748737 12.2175144,13.9748737 12.8033009,14.5606602 L14.9246212,16.6819805 C15.5104076,17.267767 15.5104076,18.2175144 14.9246212,18.8033009 L12.8033009,20.9246212 C12.2175144,21.5104076 11.267767,21.5104076 10.6819805,20.9246212 L8.56066017,18.8033009 C7.97487373,18.2175144 7.97487373,17.267767 8.56066017,16.6819805 Z M8.56066017,4.68198052 L10.6819805,2.56066017 C11.267767,1.97487373 12.2175144,1.97487373 12.8033009,2.56066017 L14.9246212,4.68198052 C15.5104076,5.26776695 15.5104076,6.21751442 14.9246212,6.80330086 L12.8033009,8.9246212 C12.2175144,9.51040764 11.267767,9.51040764 10.6819805,8.9246212 L8.56066017,6.80330086 C7.97487373,6.21751442 7.97487373,5.26776695 8.56066017,4.68198052 Z"
+                            fill="#000000" />
+                        </g>
+                      </svg>
+                    </span>
+                    <span class="menu-text">Task Manager</span>
+                    <span class="menu-label">
+                      <span class="label label-success label-rounded">2</span>
+                    </span>
+                  </a>
+                </li>
+                <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
+                  <a href="javascript:;" class="menu-link menu-toggle">
+                    <span class="svg-icon menu-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+                        height="24px" viewBox="0 0 24 24" version="1.1">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                          <rect x="0" y="0" width="24" height="24" />
+                          <path
+                            d="M9,15 L7.5,15 C6.67157288,15 6,15.6715729 6,16.5 C6,17.3284271 6.67157288,18 7.5,18 C8.32842712,18 9,17.3284271 9,16.5 L9,15 Z M9,15 L9,9 L15,9 L15,15 L9,15 Z M15,16.5 C15,17.3284271 15.6715729,18 16.5,18 C17.3284271,18 18,17.3284271 18,16.5 C18,15.6715729 17.3284271,15 16.5,15 L15,15 L15,16.5 Z M16.5,9 C17.3284271,9 18,8.32842712 18,7.5 C18,6.67157288 17.3284271,6 16.5,6 C15.6715729,6 15,6.67157288 15,7.5 L15,9 L16.5,9 Z M9,7.5 C9,6.67157288 8.32842712,6 7.5,6 C6.67157288,6 6,6.67157288 6,7.5 C6,8.32842712 6.67157288,9 7.5,9 L9,9 L9,7.5 Z M11,13 L13,13 L13,11 L11,11 L11,13 Z M13,11 L13,7.5 C13,5.56700338 14.5670034,4 16.5,4 C18.4329966,4 20,5.56700338 20,7.5 C20,9.43299662 18.4329966,11 16.5,11 L13,11 Z M16.5,13 C18.4329966,13 20,14.5670034 20,16.5 C20,18.4329966 18.4329966,20 16.5,20 C14.5670034,20 13,18.4329966 13,16.5 L13,13 L16.5,13 Z M11,16.5 C11,18.4329966 9.43299662,20 7.5,20 C5.56700338,20 4,18.4329966 4,16.5 C4,14.5670034 5.56700338,13 7.5,13 L11,13 L11,16.5 Z M7.5,11 C5.56700338,11 4,9.43299662 4,7.5 C4,5.56700338 5.56700338,4 7.5,4 C9.43299662,4 11,5.56700338 11,7.5 L11,11 L7.5,11 Z"
+                            fill="#000000" fill-rule="nonzero" />
+                        </g>
+                      </svg>
+                    </span>
+                    <span class="menu-text">Team Manager a</span>
+                    <i class="menu-arrow"></i>
+                  </a>
+                  <div class="menu-submenu menu-submenu-classic menu-submenu-right">
+                    <ul class="menu-subnav">
+                      <li class="menu-item" aria-haspopup="true">
+                        <a href="javascript:;" class="menu-link">
+                          <i class="menu-bullet menu-bullet-dot">
+                            <span></span>
+                          </i>
+                          <span class="menu-text">Add Team Member</span>
+                        </a>
+                      </li>
+                      <li class="menu-item" aria-haspopup="true">
+                        <a href="javascript:;" class="menu-link">
+                          <i class="menu-bullet menu-bullet-dot">
+                            <span></span>
+                          </i>
+                          <span class="menu-text">Edit Team Member</span>
+                        </a>
+                      </li>
+                      <li class="menu-item" aria-haspopup="true">
+                        <a href="javascript:;" class="menu-link">
+                          <i class="menu-bullet menu-bullet-dot">
+                            <span></span>
+                          </i>
+                          <span class="menu-text">Delete Team Member</span>
+                        </a>
+                      </li>
+                      <li class="menu-item" aria-haspopup="true">
+                        <a href="javascript:;" class="menu-link">
+                          <i class="menu-bullet menu-bullet-dot">
+                            <span></span>
+                          </i>
+                          <span class="menu-text">Team Member Reports</span>
+                        </a>
+                      </li>
+                      <li class="menu-item" aria-haspopup="true">
+                        <a href="javascript:;" class="menu-link">
+                          <i class="menu-bullet menu-bullet-dot">
+                            <span></span>
+                          </i>
+                          <span class="menu-text">Assign Tasks</span>
+                        </a>
+                      </li>
+                      <li class="menu-item" aria-haspopup="true">
+                        <a href="javascript:;" class="menu-link">
+                          <i class="menu-bullet menu-bullet-dot">
+                            <span></span>
+                          </i>
+                          <span class="menu-text">Promote Team Member</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
+                  <a href="javascript:;" class="menu-link menu-toggle">
+                    <span class="svg-icon menu-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+                        height="24px" viewBox="0 0 24 24" version="1.1">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                          <rect x="0" y="0" width="24" height="24" />
+                          <path
+                            d="M9,15 L7.5,15 C6.67157288,15 6,15.6715729 6,16.5 C6,17.3284271 6.67157288,18 7.5,18 C8.32842712,18 9,17.3284271 9,16.5 L9,15 Z M9,15 L9,9 L15,9 L15,15 L9,15 Z M15,16.5 C15,17.3284271 15.6715729,18 16.5,18 C17.3284271,18 18,17.3284271 18,16.5 C18,15.6715729 17.3284271,15 16.5,15 L15,15 L15,16.5 Z M16.5,9 C17.3284271,9 18,8.32842712 18,7.5 C18,6.67157288 17.3284271,6 16.5,6 C15.6715729,6 15,6.67157288 15,7.5 L15,9 L16.5,9 Z M9,7.5 C9,6.67157288 8.32842712,6 7.5,6 C6.67157288,6 6,6.67157288 6,7.5 C6,8.32842712 6.67157288,9 7.5,9 L9,9 L9,7.5 Z M11,13 L13,13 L13,11 L11,11 L11,13 Z M13,11 L13,7.5 C13,5.56700338 14.5670034,4 16.5,4 C18.4329966,4 20,5.56700338 20,7.5 C20,9.43299662 18.4329966,11 16.5,11 L13,11 Z M16.5,13 C18.4329966,13 20,14.5670034 20,16.5 C20,18.4329966 18.4329966,20 16.5,20 C14.5670034,20 13,18.4329966 13,16.5 L13,13 L16.5,13 Z M11,16.5 C11,18.4329966 9.43299662,20 7.5,20 C5.56700338,20 4,18.4329966 4,16.5 C4,14.5670034 5.56700338,13 7.5,13 L11,13 L11,16.5 Z M7.5,11 C5.56700338,11 4,9.43299662 4,7.5 C4,5.56700338 5.56700338,4 7.5,4 C9.43299662,4 11,5.56700338 11,7.5 L11,11 L7.5,11 Z"
+                            fill="#000000" fill-rule="nonzero" />
+                        </g>
+                      </svg>
+                    </span>
+                    <span class="menu-text">Team Manager</span>
+                    <i class="menu-arrow"></i>
+                  </a>
+                  <div class="menu-submenu menu-submenu-classic menu-submenu-right">
+                    <ul class="menu-subnav">
+                      <li class="menu-item" aria-haspopup="true">
+                        <a href="javascript:;" class="menu-link">
+                          <i class="menu-bullet menu-bullet-dot">
+                            <span></span>
+                          </i>
+                          <span class="menu-text">Add Team Member</span>
+                        </a>
+                      </li>
+                      <li class="menu-item" aria-haspopup="true">
+                        <a href="javascript:;" class="menu-link">
+                          <i class="menu-bullet menu-bullet-dot">
+                            <span></span>
+                          </i>
+                          <span class="menu-text">Edit Team Member</span>
+                        </a>
+                      </li>
+                      <li class="menu-item" aria-haspopup="true">
+                        <a href="javascript:;" class="menu-link">
+                          <i class="menu-bullet menu-bullet-dot">
+                            <span></span>
+                          </i>
+                          <span class="menu-text">Delete Team Member</span>
+                        </a>
+                      </li>
+                      <li class="menu-item" aria-haspopup="true">
+                        <a href="javascript:;" class="menu-link">
+                          <i class="menu-bullet menu-bullet-dot">
+                            <span></span>
+                          </i>
+                          <span class="menu-text">Team Member Reports</span>
+                        </a>
+                      </li>
+                      <li class="menu-item" aria-haspopup="true">
+                        <a href="javascript:;" class="menu-link">
+                          <i class="menu-bullet menu-bullet-dot">
+                            <span></span>
+                          </i>
+                          <span class="menu-text">Assign Tasks</span>
+                        </a>
+                      </li>
+                      <li class="menu-item" aria-haspopup="true">
+                        <a href="javascript:;" class="menu-link">
+                          <i class="menu-bullet menu-bullet-dot">
+                            <span></span>
+                          </i>
+                          <span class="menu-text">Promote Team Member</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="menu-item" aria-haspopup="true">
+                  <a href="javascript:;" class="menu-link">
+                    <span class="svg-icon menu-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+                        height="24px" viewBox="0 0 24 24" version="1.1">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                          <rect x="0" y="0" width="24" height="24" />
+                          <path
+                            d="M4.5,3 L19.5,3 C20.3284271,3 21,3.67157288 21,4.5 L21,19.5 C21,20.3284271 20.3284271,21 19.5,21 L4.5,21 C3.67157288,21 3,20.3284271 3,19.5 L3,4.5 C3,3.67157288 3.67157288,3 4.5,3 Z M8,5 C7.44771525,5 7,5.44771525 7,6 C7,6.55228475 7.44771525,7 8,7 L16,7 C16.5522847,7 17,6.55228475 17,6 C17,5.44771525 16.5522847,5 16,5 L8,5 Z M10.5857864,14 L9.17157288,15.4142136 C8.78104858,15.8047379 8.78104858,16.4379028 9.17157288,16.8284271 C9.56209717,17.2189514 10.1952621,17.2189514 10.5857864,16.8284271 L12,15.4142136 L13.4142136,16.8284271 C13.8047379,17.2189514 14.4379028,17.2189514 14.8284271,16.8284271 C15.2189514,16.4379028 15.2189514,15.8047379 14.8284271,15.4142136 L13.4142136,14 L14.8284271,12.5857864 C15.2189514,12.1952621 15.2189514,11.5620972 14.8284271,11.1715729 C14.4379028,10.7810486 13.8047379,10.7810486 13.4142136,11.1715729 L12,12.5857864 L10.5857864,11.1715729 C10.1952621,10.7810486 9.56209717,10.7810486 9.17157288,11.1715729 C8.78104858,11.5620972 8.78104858,12.1952621 9.17157288,12.5857864 L10.5857864,14 Z"
+                            fill="#000000" />
+                        </g>
+                      </svg>
+                    </span>
+                    <span class="menu-text">Create New Project</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li> -->
+        </ul>
+        <!--end::Header Nav-->
+      </div>
+      <!--end::Header Menu-->
+    </div>
+    <!--end::Header Menu Wrapper-->
+    <!--begin::Topbar-->
+    <div class="topbar">
+      <!--begin::Languages-->
+      <app-language-selector></app-language-selector>
+      <!--end::Languages-->
+      <!--begin::User-->
+      <div class="topbar-item">
+        <div [attr.title]="'MSG000173.descricao' | translate" class="btn btn-icon w-auto btn-clean d-flex align-items-center btn-lg px-2" id="kt_quick_user_toggle"
+          >
+          <span class="text-muted font-weight-bold font-size-base d-none d-md-inline mr-1">{{ "MSG000082.descricao" | translate }},</span>
+          <span
+            class="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline mr-3">{{getUsuarioLogado.nome | titlecase }}</span>
+          <span class="symbol symbol-35 symbol-light-success">
+            <span class="symbol-label font-size-h5 font-weight-bold">
+              <img class="h-75 align-self-end" [src]="getUsuarioLogado.arquivoCaminho" alt="" srcset="">
+              <!-- <img src="../../../../assets/media/svg/avatars/009-boy-4.svg" class="h-75 align-self-end" alt=""> -->
+            </span>
+          </span>
+        </div>
+      </div>
+      <!--end::User-->
+    </div>
+    <!--end::Topbar-->
+  </div>
+  <!--end::Container-->
+</div>

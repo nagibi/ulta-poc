@@ -1,0 +1,32 @@
+<!-- Modal-->
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title"><span>Enviar e-mail</span></h5>
+    <button type="button" class="close" (click)="activeModal.dismiss()" aria-label="Close">
+      <i aria-hidden="true" class="ki ki-close"></i>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form class="form" novalidate="novalidate" id="kt_login_signin_form" [formGroup]="form" (ngSubmit)="submit()"
+        (keydown.enter)="submit(); (false)">
+        <div class="form-group">
+            <input [ngClass]="{'is-invalid': isControlInvalid('email')}" class="form-control form-control-solid h-auto py-5 px-6" type="email" formControlName="email"
+                [placeholder]="'MSG000003.descricao' | translate" autocomplete="off" />
+            <div *ngIf="isControlHasError('email', 'required')" class="invalid-feedback">
+                <p>{{ "MSG000073.descricao" | translate }}</p>
+            </div>
+            <div *ngIf="isControlHasError('email', 'email')" class="invalid-feedback">
+                <p>{{ "MSG000005.descricao" | translate }}</p>
+            </div>
+            <div *ngIf="isControlHasError('email', 'error')" class="invalid-feedback">
+                <p>{{msgsError['email']}}</p>
+            </div>
+        </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" (click)="activeModal.dismiss()" class="btn btn-secondary" data-dismiss="modal">{{ "MSG000014.descricao" | translate }}</button>
+    <button type="button" (click)="submit()" class="btn btn-primary">{{ "MSG000140.descricao" | translate }}</button>
+  </div>
+</div>
+<!-- End modal  -->

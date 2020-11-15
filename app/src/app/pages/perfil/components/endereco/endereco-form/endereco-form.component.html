@@ -1,0 +1,230 @@
+<div class="row">
+  <div class="col-md-12">
+    <app-card>
+
+      <!--begin::Form-->
+      <form class="form" novalidate="novalidate" [formGroup]="form" (ngSubmit)="salvar()"
+        (keydown.enter)="salvar(); (false)">
+        <div class="card-body">
+          <input type="hidden" formControlName="usuarioCriacaoId">
+          <input type="hidden" formControlName="usuarioAtualizacaoId">
+          <input type="hidden" formControlName="dataCriacao">
+          <input type="hidden" formControlName="dataAtualizacao">
+
+          <div class="form-group row">
+            <div class="col-lg-3">
+              <label>{{ "MSG000251.descricao" | translate }}:</label>
+              <div class="input-group">
+                <input type="text" (change)=buscarCep() class="form-control" mask="00.000-000"
+                  [ngClass]="{'is-invalid': isControlInvalid('cep')}" formControlName="cep"
+                  [placeholder]="'MSG000251.descricao' | translate" autocomplete="off">
+                <div class="input-group-append">
+                  <button class="btn btn-primary" type="button" (click)=buscarCep()>Pesquisar</button>
+                </div>
+              </div>
+              <div *ngIf="isControlHasError('cep', 'required')" class="invalid-feedback">
+                <p>{{ "MSG000073.descricao" | translate }}</p>
+              </div>
+              <div *ngIf="isControlHasError('cep', 'error')" class="invalid-feedback">
+                <p>{{msgsError['cep']}}</p>
+              </div>
+            </div>
+            <div class="col-lg-9">
+              <label>{{ "MSG000250.descricao" | translate }}:</label>
+              <input [disabled]=!true type="text" class="form-control" maxlength=100
+                [ngClass]="{'is-invalid': isControlInvalid('titulo')}" formControlName="titulo"
+                [placeholder]="'MSG000250.descricao' | translate" autocomplete="off">
+              <div *ngIf="isControlHasError('titulo', 'required')" class="invalid-feedback">
+                <p>{{ "MSG000073.descricao" | translate }}</p>
+              </div>
+              <div *ngIf="isControlHasError('titulo', 'error')" class="invalid-feedback">
+                <p>{{msgsError['titulo']}}</p>
+              </div>
+            </div>
+            <!-- <div class="col-lg-3">
+              <label>{{ "MSG000236.descricao" | translate }}:</label>
+              <ngx-select [ngClass]="{'is-invalid': isControlInvalid('tipo')}" formControlName="tipo" [items]="tipoList"
+                [allowClear]="true" [placeholder]="'MSG000236.descricao' | translate"></ngx-select>
+              <div *ngIf="isControlHasError('tipo', 'required')" class="invalid-feedback">
+                <p>{{ "MSG000073.descricao" | translate }}</p>
+              </div>
+              <div *ngIf="isControlHasError('tipo', 'error')" class="invalid-feedback">
+                <p>{{msgsError['tipo']}}</p>
+              </div>
+            </div> -->
+          </div>
+          <div class="form-group row">
+            <div class="col-lg-9">
+              <label>{{ "MSG000252.descricao" | translate }}:</label>
+              <input type="text" class="form-control" [ngClass]="{'is-invalid': isControlInvalid('logradouro')}"
+                formControlName="logradouro" [placeholder]="'MSG000252.descricao' | translate" autocomplete="off">
+              <div *ngIf="isControlHasError('logradouro', 'required')" class="invalid-feedback">
+                <p>{{ "MSG000073.descricao" | translate }}</p>
+              </div>
+              <div *ngIf="isControlHasError('logradouro', 'error')" class="invalid-feedback">
+                <p>{{msgsError['logradouro']}}</p>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <label>{{ "MSG000246.descricao" | translate }}:</label>
+              <input type="number" class="form-control" [ngClass]="{'is-invalid': isControlInvalid('numero')}"
+                formControlName="numero" [placeholder]="'MSG000246.descricao' | translate" autocomplete="off">
+              <div *ngIf="isControlHasError('numero', 'required')" class="invalid-feedback">
+                <p>{{ "MSG000073.descricao" | translate }}</p>
+              </div>
+              <div *ngIf="isControlHasError('numero', 'error')" class="invalid-feedback">
+                <p>{{msgsError['numero']}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+
+            <div class="col-lg-3">
+              <label>{{ "MSG000242.descricao" | translate }}:</label>
+              <ngx-select [ngClass]="{'is-invalid': isControlInvalid('ufId')}" formControlName="ufId"
+                (select)=carregarComboMunicipios() [items]="ufList" [placeholder]="'MSG000242.descricao' | translate">
+              </ngx-select>
+              <div *ngIf="isControlHasError('ufId', 'required')" class="invalid-feedback">
+                <p>{{ "MSG000073.descricao" | translate }}</p>
+              </div>
+              <div *ngIf="isControlHasError('ufId', 'error')" class="invalid-feedback">
+                <p>{{msgsError['ufId']}}</p>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <label>{{ "MSG000241.descricao" | translate }}:</label>
+              <ngx-select [ngClass]="{'is-invalid': isControlInvalid('municipioId')}" [disabled]=!cidadeList.length
+                formControlName="municipioId" [items]="cidadeList" [placeholder]="'MSG000241.descricao' | translate">
+              </ngx-select>
+              <div *ngIf="isControlHasError('municipioId', 'required')" class="invalid-feedback">
+                <p>{{ "MSG000073.descricao" | translate }}</p>
+              </div>
+              <div *ngIf="isControlHasError('municipioId', 'error')" class="invalid-feedback">
+                <p>{{msgsError['municipioId']}}</p>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <label>{{ "MSG000240.descricao" | translate }}:</label>
+              <input type="text" class="form-control" maxlength=100
+                [ngClass]="{'is-invalid': isControlInvalid('bairro')}" formControlName="bairro"
+                [placeholder]="'MSG000240.descricao' | translate" autocomplete="off">
+              <div *ngIf="isControlHasError('bairro', 'required')" class="invalid-feedback">
+                <p>{{ "MSG000073.descricao" | translate }}</p>
+              </div>
+              <div *ngIf="isControlHasError('bairro', 'error')" class="invalid-feedback">
+                <p>{{msgsError['titulo']}}</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="form-group row">
+            <div class="col-lg-12">
+              <label>{{ "MSG000253.descricao" | translate }}:</label>
+              <textarea class="form-control" maxlength=100 [ngClass]="{'is-invalid': isControlInvalid('complemento')}"
+                formControlName="complemento" [placeholder]="'MSG000253.descricao' | translate"
+                autocomplete="off"></textarea>
+              <div *ngIf="isControlHasError('complemento', 'required')" class="invalid-feedback">
+                <p>{{ "MSG000073.descricao" | translate }}</p>
+              </div>
+              <div *ngIf="isControlHasError('complemento', 'error')" class="invalid-feedback">
+                <p>{{msgsError['complemento']}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="alert alert-custom alert-white alert-shadow gutter-b" role="alert">
+            <div class="alert-icon">
+              <span class="svg-icon svg-icon-primary svg-icon-xl">
+                <!--begin::Svg Icon | path:assets/media/svg/icons/Tools/Compass.svg-->
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <rect x="0" y="0" width="24" height="24"></rect>
+                    <path d="M7.07744993,12.3040451 C7.72444571,13.0716094 8.54044565,13.6920474 9.46808594,14.1079953 L5,23 L4.5,18 L7.07744993,12.3040451 Z M14.5865511,14.2597864 C15.5319561,13.9019016 16.375416,13.3366121 17.0614026,12.6194459 L19.5,18 L19,23 L14.5865511,14.2597864 Z M12,3.55271368e-14 C12.8284271,3.53749572e-14 13.5,0.671572875 13.5,1.5 L13.5,4 L10.5,4 L10.5,1.5 C10.5,0.671572875 11.1715729,3.56793164e-14 12,3.55271368e-14 Z" fill="#000000" opacity="0.3"></path>
+                    <path d="M12,10 C13.1045695,10 14,9.1045695 14,8 C14,6.8954305 13.1045695,6 12,6 C10.8954305,6 10,6.8954305 10,8 C10,9.1045695 10.8954305,10 12,10 Z M12,13 C9.23857625,13 7,10.7614237 7,8 C7,5.23857625 9.23857625,3 12,3 C14.7614237,3 17,5.23857625 17,8 C17,10.7614237 14.7614237,13 12,13 Z" fill="#000000" fill-rule="nonzero"></path>
+                  </g>
+                </svg>
+                <!--end::Svg Icon-->
+              </span>
+            </div>
+            <div class="alert-text">
+<p>{{ "MSG000256.descricao" | translate }}</p>
+            </div>
+          </div>
+          <!-- https://maps.googleapis.com/maps/api/geocode/json?address=29166330&key=AIzaSyAnfAgMAUaZSg4Eu9V9AKGGD9zcdrbO-CI -->
+          <agm-map [latitude]="location.lat" [longitude]="location.lng" [(zoom)]="location.zoom"
+            [disableDefaultUI]="true" [zoomControl]="true" [(fitBounds)]='location.viewport'>
+            
+            <agm-marker *ngFor="let m of markers; let i = index"
+              [latitude]="m.lat" [longitude]="m.lng" [label]="m.label" [markerDraggable]="m.draggable"
+              (dragEnd)="markerDragEnd(m, $event)">
+            </agm-marker>
+            <!-- <agm-marker [latitude]="location.marker.lat" [longitude]="location.marker.lng" [markerDraggable]="location.marker.draggable" (dragEnd)='markerDragEnd($event)'></agm-marker> -->
+          </agm-map>
+
+          <!-- <button class="btn btn-success" (click)=updateOnMap()>Pesquisar</button> -->
+
+          <!-- <map-info-window>
+            Map Info Window Component
+         </map-info-window> -->
+          <!-- 
+          <google-map
+          height="500px"
+          width="100%"
+          [zoom]="zoom"
+          [center]="center"
+          [options]="options"
+          (mapDragstart)="onDragStart()"
+          (mapDragend)="onDragEnd()"
+          (mapClick)="click($event)"
+        >
+
+          <map-marker
+            #markerElem
+            *ngFor="let marker of markers"
+            [position]="marker.position"
+            [label]="marker.label"
+            [title]="marker.title"
+            [options]="marker.options"
+            (mapClick)="openMapInfoWindow(markerElem)"
+          >
+          </map-marker> -->
+
+          <!-- <map-info-window>{{ infoContent }}</map-info-window> -->
+          <!-- </google-map> -->
+          <!-- <div class="row">
+            <div class="col-md-12">
+              <div class="btn-toolbar">
+                <div class="btn-group" role="group" aria-label="First group">
+
+                  <button type="button" class="btn btn-warning btn-icon"
+                    [attr.title]="'MSG000192.descricao' | translate" (click)="zoomOut()"><i
+                      class="la la-minus"></i></button>
+                  <button type="button" class="btn btn-warning btn-icon"
+                    [attr.title]="'MSG000193.descricao' | translate" (click)="zoomIn()"><i
+                      class="la la-plus"></i></button> 
+                      <button type="button" class="btn btn-primary btn-icon"
+                      [attr.title]="'MSG000193.descricao' | translate" (click)="logCenter()"><i
+                        class="la la-mark"></i></button>
+                      <button type="button" class="btn btn-info btn-icon"
+                    [attr.title]="'MSG000193.descricao' | translate" (click)="addMarker()"><i
+                      class="la la-map"></i></button>
+
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <!-- <button class="btn btn-info" (click)="zoomIn()">Zoom in</button>
+<button class="btn btn-info" (click)="zoomOut()">Zoom out</button> -->
+          <!-- <app-form *ngIf=registroAtual [model]=registroAtual></app-form> -->
+        </div>
+        <div class="card-footer bg-gray-100">
+          <button type="reset" id="kt_reset" [attr.title]="'MSG000014.descricao' | translate"
+            class="btn btn-secondary btn-secondary--icon" (click)=cancelar()><span>
+              <i class="la la-close"></i>
+              <span>{{ "MSG000014.descricao" | translate }}</span>
+            </span></button>
+        </div>
+      </form>
+
+    </app-card>
+  </div>
+</div>

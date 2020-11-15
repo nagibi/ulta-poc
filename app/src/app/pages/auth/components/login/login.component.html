@@ -1,0 +1,83 @@
+<!--begin::Forgot-->
+<!-- toast-->
+
+<div class="login-form login-signin">
+    <div class="text-center mb-10 mb-lg-20">
+        <h3 class="font-size-h1">{{ "MSG000002.descricao" | translate }}</h3>
+        <p class="text-muted font-weight-bold">{{ "MSG000131.descricao" | translate }}</p>
+    </div>
+    <form class="form" novalidate="novalidate" id="kt_login_signin_form" [formGroup]="form" (ngSubmit)="submit()"
+        (keydown.enter)="submit(); (false)">
+        <div class="form-group">
+            <input [ngClass]="{'is-invalid': isControlInvalid('email')}" class="form-control form-control-solid h-auto py-5 px-6" type="email" formControlName="email"
+                [placeholder]="'MSG000003.descricao' | translate" autocomplete="off" />
+            <div *ngIf="isControlHasError('email', 'required')" class="invalid-feedback">
+                <p>{{ "MSG000073.descricao" | translate }}</p>
+            </div>
+            <div *ngIf="isControlHasError('email', 'email')" class="invalid-feedback">
+                <p>{{ "MSG000005.descricao" | translate }}</p>
+            </div>
+            <div *ngIf="isControlHasError('email', 'error')" class="invalid-feedback">
+                <p>{{msgsError['email']}}</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <input [ngClass]="{'is-invalid': isControlInvalid('senha')}" class="form-control form-control-solid h-auto py-5 px-6" type="password" formControlName="senha"
+                [placeholder]="'MSG000008.descricao' | translate" autocomplete="off" maxlength={{qtdCaracters}} />
+            <div *ngIf="isControlHasError('senha', 'required')" class="invalid-feedback">
+                <p>
+                    {{
+                        "MSG000073.descricao" | translate: { value: "strong" }
+                      }}
+                </p>
+            </div>
+            <div *ngIf="
+                      isControlHasError('senha', 'minlength') ||
+                      isControlHasError('senha', 'maxlength')
+                    " class="invalid-feedback">
+                <p>
+                    {{
+                        "MSG000010.descricao"
+                          | translate: { value: qtdCaracters }
+                      }}
+                </p>
+            </div>
+            <div *ngIf="isControlHasError('senha', 'error')" class="invalid-feedback">
+                <p>{{msgsError['senha']}}</p>
+            </div>
+        </div>
+        <div class="form-group">
+              <ngx-select class="form-control-solid" (select)="idiomaSelected($event)" style="width: 100%;" formControlName="idioma" [items]="idiomaList" [allowClear]="true" [placeholder]="'MSG000090.descricao' | translate">
+                <ng-template ngx-select-option-selected let-option let-text="id">
+                    <span class="navi-link">
+                        <i class="symbol symbol-20 mr-3">
+                            <img [src]="option.value == 'pt' ? 'assets/media/svg/flags/011-brazil.svg' : 'assets/media/svg/flags/226-united-states.svg'"  alt="">
+                        </i>
+                        <span class="navi-text">{{option.text}}</span>
+                    </span>
+                </ng-template>
+            </ngx-select>
+              <div *ngIf="isControlHasError('idioma', 'required')" class="invalid-feedback">
+                <p>{{ "MSG000073.descricao" | translate }}</p>
+              </div>
+              <div *ngIf="isControlHasError('idioma', 'error')" class="invalid-feedback">
+                <p>{{msgsError['idioma']}}</p>
+            </div>
+          </div>
+        <!--begin::Action-->
+        <div class="form-group d-flex flex-wrap justify-content-between align-items-center">
+            <a class="text-dark-50 text-hover-primary my-3 mr-2" id="kt_login_forgot"
+                routerLink="/auth/recuperar-senha">
+                {{ "MSG000007.descricao" | translate }}
+            </a>
+            <!-- <button type="submit" id="kt_login_signin_submit" class="btn btn-primary font-weight-bold px-9 py-4 my-3 ">{{ "MSG000011.descricao" | translate }}</button> -->
+            <button type="submit" class="btn btn-primary font-weight-bold" [ngClass]="{'spinner spinner-white spinner-right': isLoader }">
+                {{ "MSG000011.descricao" | translate }}
+            </button>
+        </div>
+        <!--end::Action-->
+    </form>
+    <!--end::Form-->
+</div>
+<!-- <app-modal></app-modal> -->
+<!--end::Forgot-->

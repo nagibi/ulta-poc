@@ -1,0 +1,12 @@
+<!-- toast-->
+
+<div id="toast-container" class="toast-top-right">
+  <div class="toast" [ngClass]="toast.type" *ngFor="let toast of toasts" aria-live="polite" style="">
+    <button type="button" class="toast-close-button" (click)="onRemoveToast(toast)"
+      role="button">×</button>
+    <div class="toast-title"><span [innerHTML]="toast.title"></span></div>
+    <div class="toast-message"><span [innerHTML]="toast.text"></span></div>
+  </div>
+</div>
+
+<!--end toast-->

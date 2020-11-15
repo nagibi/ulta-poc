@@ -1,0 +1,44 @@
+<div class="row">
+  <div class="col-md-12">
+    <app-card>
+      <!--begin::Form-->
+      <form class="form" novalidate="novalidate" [formGroup]="form" (ngSubmit)="salvar()"
+        (keydown.enter)="salvar(); (false)">
+        <div class="card-body">
+          <div class="form-group row">
+
+          <div class="col-lg-3">
+            <label>{{ "MSG000272.descricao" | translate }}:</label>
+            <ngx-select [ngClass]="{'is-invalid': isControlInvalid('tipo')}" formControlName="tipo" [items]="tipoList" [allowClear]="true"
+              [placeholder]="'MSG000119.descricao' | translate"></ngx-select>
+              
+            <div *ngIf="isControlHasError('tipo', 'required')" class="invalid-feedback">
+              <p>{{ "MSG000073.descricao" | translate }}</p>
+            </div>
+            <div *ngIf="isControlHasError('tipo', 'error')" class="invalid-feedback">
+              <p>{{msgsError['tipo']}}</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <label>{{ "MSG000275.descricao" | translate }}:</label>
+            <input type="file" class="form-control" [ngClass]="{'is-invalid': isControlInvalid('file')}"
+              formControlName="file" multiple [placeholder]="'MSG000017.descricao' | translate" autocomplete="off" (change)="onFileChange($event)">
+            <div *ngIf="isControlHasError('file', 'required')" class="invalid-feedback">
+              <p>{{ "MSG000073.descricao" | translate }}</p>
+            </div>
+            <div *ngIf="isControlHasError('file', 'error')" class="invalid-feedback">
+              <p>{{msgsError['file']}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer bg-gray-100">
+          <button type="reset" id="kt_reset" [attr.title]="'MSG000014.descricao' | translate"
+            class="btn btn-secondary btn-secondary--icon" (click)=cancelar()><span>
+              <i class="la la-close"></i>
+              <span>{{ "MSG000014.descricao" | translate }}</span>
+            </span></button>
+          </div>
+        </div>
+      </form>
+    </app-card>
+  </div>

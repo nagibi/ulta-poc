@@ -1,0 +1,101 @@
+<!-- <div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title"><span [innerHTML]="modal.title"></span></h5>
+    <button type="button" class="close" (click)="activeModal.close('close')" aria-label="Close">
+      <i aria-hidden="true" class="ki ki-close"></i>
+    </button>
+  </div>
+  <div class="modal-body">
+    <span [innerHTML]="modal.conteudo"></span>
+  </div>
+  <div class="modal-footer">
+    <button type="button" (click)="passBack('cancel')" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    <button type="button" (click)="passBack('cancel')" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    <button type="button" (click)="passBack('ok')" class="btn btn-primary">Save changes</button>
+  </div>
+</div> -->
+<div class="modal-header">
+  <h5 class="modal-title"><span [innerHTML]="modal.title"></span></h5>
+  <button type="button" class="close" (click)="activeModal.close('close')" aria-label="Close">
+    <i aria-hidden="true" class="ki ki-close"></i>
+  </button>
+</div>
+<div class="modal-body">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="btn-toolbar" style="justify-content: center; display: flex;" >
+        <div class="btn-group" role="group" aria-label="First group">
+          <button [disabled]=!croppedImage type="button" class="btn btn-primary btn-icon" [attr.title]="'MSG000189.descricao' | translate" (click)="rotateLeft()"><i class="la la-rotate-left icon-lg"></i></button>
+          <button [disabled]=!croppedImage type="button" class="btn btn-primary btn-icon"  [attr.title]="'MSG000190.descricao' | translate" (click)="rotateRight()"><i class="la la-rotate-right icon-lg"></i></button>
+            <button [disabled]=!croppedImage type="button" class="btn btn-success btn-icon" [attr.title]="'MSG000191.descricao' | translate" (click)="flipVertical()"><i class="la la-ruler-vertical"></i></button>
+            <button [disabled]=!croppedImage type="button" class="btn btn-success btn-icon" [attr.title]="'MSG000195.descricao' | translate" (click)="flipHorizontal()"><i class="la la-ruler-horizontal"></i></button>
+            <button [disabled]=!croppedImage type="button" class="btn btn-danger btn-icon" [attr.title]="'MSG000014.descricao' | translate" (click)="resetImage()"><i class="la la-remove"></i></button>
+            <button [disabled]=!croppedImage type="button" class="btn btn-info btn-icon" [attr.title]="'MSG000194.descricao' | translate" (click)="toggleContainWithinAspectRatio()"><i class="la la-image"></i></button>
+            <button [disabled]=!croppedImage type="button" class="btn btn-warning btn-icon" [attr.title]="'MSG000192.descricao' | translate" (click)="zoomOut()"><i class="la la-minus"></i></button>
+            <button [disabled]=!croppedImage type="button" class="btn btn-warning btn-icon" [attr.title]="'MSG000193.descricao' | translate" (click)="zoomIn()"><i class="la la-plus"></i></button>
+        
+          </div>
+    </div>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-12">
+        <input type="file" accept="image/*" name="file" id="fileupload" style="width:200px; display:none;" (change)="fileChangeEvent($event)" />
+        <image-cropper
+        [imageChangedEvent]="imageChangedEvent"
+        [maintainAspectRatio]="true"
+        [containWithinAspectRatio]="containWithinAspectRatio"
+        [aspectRatio]="4 / 3"
+        [resizeToWidth]="256"
+        [cropperMinWidth]="200"
+        [onlyScaleDown]="true"
+        [roundCropper]="false"
+        [canvasRotation]="canvasRotation"
+        [transform]="transform"
+        [alignImage]="'left'"
+        [style.display]="showCropper ? null : 'none'"
+        format="png"
+        (imageCropped)="imageCropped($event)"
+        (imageLoaded)="imageLoaded()"
+        (cropperReady)="cropperReady($event)"
+        (loadImageFailed)="loadImageFailed()"
+    ></image-cropper>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 text-center">
+        <div *ngIf=!croppedImage>
+          <img src="http://www.placehold.it/200x200/EFEFEF/AAAAAA&amp;text=no+image"style="width: 200px; height: 200px;" alt="">
+      </div>
+      <div *ngIf=croppedImage>
+        <img [src]="croppedImage" [style.border]="croppedImage ? '1px solid black' : 'none'" />
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <div class="w-100">
+    <button [attr.title]="'MSG000196.descricao' | translate" type="button" onclick="$('#fileupload').click();" class="btn btn-warning"><i class="la la-image icon-lg"></i> {{ "MSG000196.descricao" | translate }}</button>
+    
+<div ngbDropdown class="btn-group float-right">
+  <button [disabled]=!croppedImage type="button" [attr.title]="'MSG000092.descricao' | translate" (click)="onRecortar(true)" class="btn btn-primary"><i class="la la-crop icon-lg"></i> {{ "MSG000092.descricao" | translate }}</button>
+  <button [attr.title]="'MSG000162.descricao' | translate" [disabled]=!croppedImage id="dropdownSave" ngbDropdownToggle type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split">
+      <span class="sr-only">{{ "MSG000162.descricao" | translate }}</span>
+  </button>
+  <div class="dropdown-menu" ngbDropdownMenu aria-labelledby="dropdownSave">
+    <a class="dropdown-item" (click)="onRecortar(true)" [attr.title]="'MSG000197.descricao' | translate">{{ "MSG000197.descricao" | translate }}</a>
+    <a class="dropdown-item" (click)="onRecortar(false)" [attr.title]="'MSG000198.descricao' | translate">{{ "MSG000198.descricao" | translate }}</a>
+  </div>
+</div>
+  </div>
+</div>
+<!-- <div class="modal-footer">
+  <button class="btn green" onclick="$('#fileupload').click();" accept="image/*">
+    <i class="fa fa-image"></i> Selecionar
+  </button>
+  <button [disabled]=!croppedImage type="button" ng-click="controller.onUpload(croppedDataUrl, picFile.name)"
+    class="btn btn-info"><span>Recortar</span></button>
+  <button [disabled]=!croppedImage ng-if="picFile && controller.isOriginal" type="button" ng-click="controller.onOriginal(picFile)"
+    class="btn btn-warning" data-dismiss="modal"><span>Original</span></button>
+</div> -->

@@ -1,0 +1,109 @@
+<app-card isCollapsed=false icon="flaticon2-search" text='MSG000177.descricao' subtitle='MSG000178.descricao'>
+  <form (keydown.enter)="filtrarGrid(gridService); (false)" novalidate="novalidate" [formGroup]="form">
+    <div class="card-body">
+      <div class="row mb-6">
+        <div class="col-lg-3 mb-lg-0 mb-6">
+          <label>{{ "MSG000156.descricao" | translate }}:</label>
+          <input type="text" class="form-control datatable-input" placeholder="Id" formControlName='id'>
+        </div>
+        <div class="col-lg-3 mb-lg-0 mb-6">
+          <label>{{ "MSG000017.descricao" | translate }}:</label>
+          <input type="text" class="form-control datatable-input" [placeholder]="'MSG000017.descricao' | translate"
+            formControlName='nome'>
+        </div>
+        <div class="col-lg-3 mb-lg-0 mb-6">
+          <label>{{ "MSG000159.descricao" | translate }}:</label>
+          <ngx-select formControlName="status" [items]="statusList" [allowClear]="true"
+            [placeholder]="'MSG000159.descricao' | translate">
+          </ngx-select>
+        </div>
+        <div class="col-lg-3 mb-lg-0 mb-6">
+          <label>{{ "MSG000234.descricao" | translate }}:</label>
+          <input type="text" class="form-control datatable-input" [placeholder]="'MSG000234.descricao' | translate"
+            formControlName='nomeOriginal'>
+        </div>
+
+      </div>
+      <div class="row mb-6">
+        <div class="col-lg-3 mb-lg-0 mb-6">
+          <label>{{ "MSG000236.descricao" | translate }}:</label>
+          <ngx-select formControlName="tipo" [items]="tipoList" [allowClear]="true"
+            [placeholder]="'MSG000236.descricao' | translate">
+          </ngx-select>
+        </div>
+        <div class="col-lg-6 mb-lg-0 mb-6">
+          <label>{{ "MSG000235.descricao" | translate }}:</label>
+          <input type="text" class="form-control datatable-input" [placeholder]="'MSG000235.descricao' | translate"
+            formControlName='caminho'>
+        </div>
+        <div class="col-lg-3 mb-lg-0 mb-6">
+          <label>{{ "MSG000237.descricao" | translate }}:</label>
+          <input type="text" class="form-control datatable-input" [placeholder]="'MSG000237.descricao' | translate"
+            formControlName='extensao'>
+        </div>
+
+      </div>
+      <div class="row mb-8">
+        <div class="col-lg-6 mb-lg-0 mb-6">
+
+          <label>{{ "MSG000161.descricao" | translate }}:</label>
+          <div class="input-daterange input-group" id="kt_datepicker_5">
+            <input type="date" formControlName='dataCriacaoInicial' class="form-control form-control-lg"
+              [placeholder]="'MSG000179.descricao' | translate" autocomplete="off">
+            <div class="input-group-append">
+              <span class="input-group-text">
+                <i class="la la-ellipsis-h"></i>
+              </span>
+            </div>
+            <input type="date" formControlName='dataCriacaoFinal' class="form-control form-control-lg"
+              [placeholder]="'MSG000180.descricao' | translate" autocomplete="off">
+
+          </div>
+          <span class="form-text text-muted">{{ "MSG000188.descricao" | translate }}</span>
+        </div>
+        <div class="col-lg-6 mb-lg-0 mb-6">
+
+          <label>{{ "MSG000160.descricao" | translate }}:</label>
+          <div class="input-daterange input-group" id="kt_datepicker_5">
+            <input type="date" formControlName='dataAtualizacaoInicial' class="form-control form-control-lg"
+              [placeholder]="'MSG000179.descricao' | translate" autocomplete="off">
+            <div class="input-group-append">
+              <span class="input-group-text">
+                <i class="la la-ellipsis-h"></i>
+              </span>
+            </div>
+            <input type="date" formControlName='dataAtualizacaoFinal' class="form-control form-control-lg"
+              [placeholder]="'MSG000180.descricao' | translate" autocomplete="off">
+
+          </div>
+          <span class="form-text text-muted">{{ "MSG000188.descricao" | translate }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-footer bg-gray-100 text-left">
+      <div class="row">
+        <div class="col-md-12">
+          <button class="btn btn-primary btn-primary--icon" id="kt_search" (click)=filtroAvancado()>
+            <span>
+              <i class="la la-search"></i>
+              <span>{{ "MSG000176.descricao" | translate }}</span>
+            </span>
+          </button>&nbsp;&nbsp;
+          <button class="btn btn-secondary btn-secondary--icon" id="kt_reset" (click)=cancelar()>
+            <span>
+              <i class="la la-close"></i>
+              <span>{{ "MSG000014.descricao" | translate }}</span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</app-card>
+<br>
+<app-card>
+  <div class="card-body">
+    <app-grid [gridService]=grid></app-grid>
+  </div>
+</app-card>

@@ -1,0 +1,163 @@
+<div class="flex-row-fluid ml-lg-8">
+  <!--begin::Card-->
+  <div class="card card-custom card-stretch">
+    <!--begin::Form-->
+    <form class="form" novalidate="novalidate" id="kt_login_signin_form" [formGroup]="form" (ngSubmit)="salvar()"
+      (keydown.enter)="salvar(); (false)">
+      <!--begin::Body-->
+      <div class="card-body">
+        <div class="row">
+          <label class="col-xl-3"></label>
+          <div class="col-lg-9 col-xl-6">
+            <h5 class="font-weight-bold mb-6">{{ "MSG000093.descricao" | translate }}</h5>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-xl-3 col-lg-3 col-form-label text-right">{{ "MSG000094.descricao" | translate }}</label>
+          <div class="col-lg-9 col-xl-6">
+            <div class="image-input image-input-outline" id="kt_profile_avatar"
+              style="background-image: url(assets/media/users/blank.png)">
+              <!-- <div class="image-input-wrapper" style="background-image: url(assets/media/users/300_21.jpg)"></div> -->
+              <div class="image-input-wrapper" [ngStyle]="{'background-image': 'url(' + getUsuarioLogado.arquivoCaminho + ')'}">
+                <!-- <div class="image-input-wrapper" style="background-image: url(assets/media/svg/avatars/009-boy-4.svg)"> -->
+              </div>
+               <label class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" 
+                data-action="change" (click)=onCropImageClick() title="Alterar Avatar">
+                <i class="fa fa-pen icon-sm text-muted"></i>
+                <!-- <input type="file" name="profile_avatar" accept=".png, .jpg, .jpeg"> -->
+                <!-- <input type="hidden" name="profile_avatar_remove"> -->
+              </label>
+              <!-- <label class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
+                data-action="change" data-toggle="tooltip" title="" data-original-title="Change avatar">
+                <i class="fa fa-pen icon-sm text-muted"></i>
+                <input type="file" name="profile_avatar" accept=".png, .jpg, .jpeg">
+                <input type="hidden" name="profile_avatar_remove">
+              </label> -->
+              <!-- <span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
+                data-action="cancel" data-toggle="tooltip" title="" data-original-title="Cancel avatar">
+                <i class="ki ki-bold-close icon-xs text-muted"></i>
+              </span>
+              <span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
+                data-action="remove" data-toggle="tooltip" title="" data-original-title="Remove avatar">
+                <i class="ki ki-bold-close icon-xs text-muted"></i>
+              </span> -->
+            </div>
+            <span class="form-text text-muted">{{ "MSG000095.descricao" | translate }}</span>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-xl-3 col-lg-3 col-form-label text-right">{{ "MSG000017.descricao" | translate }}</label>
+          <div class="col-lg-9 col-xl-6">
+            <input class="form-control form-control-lg form-control-solid" type="text"
+              [ngClass]="{'is-invalid': isControlInvalid('nome')}" formControlName="nome"
+              [placeholder]="'MSG000017.descricao' | translate" autocomplete="off">
+            <div *ngIf="isControlHasError('nome', 'required')" class="invalid-feedback">
+              <p>{{ "MSG000073.descricao" | translate }}</p>
+            </div>
+            <div *ngIf="isControlHasError('nome', 'error')" class="invalid-feedback">
+              <p>{{msgsError['nome']}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-xl-3 col-lg-3 col-form-label text-right">{{ "MSG000003.descricao" | translate }}</label>
+          <div class="col-lg-9 col-xl-6">
+            <input class="form-control form-control-lg form-control-solid" 
+            type="email"
+              [ngClass]="{'is-invalid': isControlInvalid('email')}" formControlName="email"
+              [placeholder]="'MSG000003.descricao' | translate" autocomplete="off">
+            <div *ngIf="isControlHasError('email', 'required')" class="invalid-feedback">
+              <p>{{ "MSG000006.descricao" | translate }}</p>
+            </div>
+            <div *ngIf="isControlHasError('email', 'email')" class="invalid-feedback">
+              <p>{{ "MSG000005.descricao" | translate }}</p>
+            </div>
+            <div *ngIf="isControlHasError('email', 'error')" class="invalid-feedback">
+              <p>{{msgsError['email']}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-xl-3 col-lg-3 col-form-label text-right">{{ "MSG000117.descricao" | translate }}</label>
+          <div class="col-lg-9 col-xl-6">
+            <ngx-select (searchChange)="addressSearchChanged($event)" formControlName="sexo" [items]="sexoList" [allowClear]="true" [placeholder]="'MSG000119.descricao' | translate"></ngx-select>
+            <div *ngIf="isControlHasError('sexo', 'required')" class="invalid-feedback">
+              <p>{{ "MSG000073.descricao" | translate }}</p>
+            </div>
+            <div *ngIf="isControlHasError('sexo', 'error')" class="invalid-feedback">
+              <p>{{msgsError['email']}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-xl-3 col-lg-3 col-form-label text-right">{{ "MSG000096.descricao" | translate }}</label>
+          <div class="col-lg-9 col-xl-6">
+            <div class="input-group mb-3">
+              <input type="text" ngbDatepicker #d="ngbDatepicker"
+                class="form-control form-control-lg form-control-solid"
+                [ngClass]="{'is-invalid': isControlInvalid('dataNascimento')}" req formControlName="dataNascimento"
+                [placeholder]="'MSG000096.descricao' | translate" autocomplete="off">
+              <div class="input-group-append">
+                <a href="javascript:;" class="btn btn-outline-secondary" (click)="d.toggle()"><i class="fa fa-calendar"
+                    aria-hidden="true"></i></a>
+              </div>
+            </div>
+            <div *ngIf="isControlHasError('dataNascimento', 'required')" class="invalid-feedback">
+              <p>{{ "MSG000073.descricao" | translate }}</p>
+            </div>
+            <div *ngIf="isControlHasError('dataNascimento', 'error')" class="invalid-feedback">
+              <p>{{msgsError['dataNascimento']}}</p>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="row">
+          <label class="col-xl-3"></label>
+          <div class="col-lg-9 col-xl-6">
+            <h5 class="font-weight-bold mt-10 mb-6">{{ "MSG000097.descricao" | translate }}</h5>
+          </div>
+        </div>
+       <div class="form-group row">
+          <label class="col-xl-3 col-lg-3 col-form-label text-right">{{ "MSG000098.descricao" | translate }}</label>
+          <div class="col-lg-9 col-xl-6">
+            <div class="input-group input-group-lg input-group-solid">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="la la-phone"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control form-control-lg form-control-solid" value="+35278953712"
+                placeholder="Phone">
+            </div>
+            <span class="form-text text-muted">We'll never share your email with anyone else.</span>
+          </div>
+        </div> -->
+        <!-- <div class="form-group row">
+          <label class="col-xl-3 col-lg-3 col-form-label text-right">Email Address</label>
+          <div class="col-lg-9 col-xl-6">
+            <div class="input-group input-group-lg input-group-solid">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="la la-at"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control form-control-lg form-control-solid" value="nick.bold@loop.com" placeholder="Email">
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-xl-3 col-lg-3 col-form-label text-right">Company Site</label>
+          <div class="col-lg-9 col-xl-6">
+            <div class="input-group input-group-lg input-group-solid">
+              <input type="text" class="form-control form-control-lg form-control-solid" placeholder="Username" value="loop">
+              <div class="input-group-append">
+                <span class="input-group-text">.com</span>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+      <!--end::Body-->
+    </form>
+    <!--end::Form-->
+  </div>
+</div>

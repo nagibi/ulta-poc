@@ -1,0 +1,100 @@
+<div class="row">
+  <div class="col-md-12">
+    <app-card>
+      <!--begin::Form-->
+      <form class="form" novalidate="novalidate" [formGroup]="form">
+        <div class="card-body">
+          <input type="hidden" formControlName="usuarioCriacaoId">
+          <input type="hidden" formControlName="usuarioAtualizacaoId">
+          <input type="hidden" formControlName="dataCriacao">
+          <input type="hidden" formControlName="dataAtualizacao">
+          <div class="form-group row">
+            <div class="col-lg-3">
+              <label>{{ "MSG000017.descricao" | translate }}:</label>
+              <input type="text" disabled class="form-control" maxlength=100
+                [ngClass]="{'is-invalid': isControlInvalid('nome')}" formControlName="nome"
+                [placeholder]="'MSG000017.descricao' | translate" autocomplete="off">
+              <div *ngIf="isControlHasError('nome', 'required')" class="invalid-feedback">
+                <p>{{ "MSG000073.descricao" | translate }}</p>
+              </div>
+              <div *ngIf="isControlHasError('nome', 'error')" class="invalid-feedback">
+                <p>{{msgsError['nome']}}</p>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <label>{{ "MSG000234.descricao" | translate }}:</label>
+              <input type="text" disabled class="form-control" maxlength=100
+                [ngClass]="{'is-invalid': isControlInvalid('nomeOriginal')}" formControlName="nomeOriginal"
+                [placeholder]="'MSG000234.descricao' | translate" autocomplete="off">
+              <div *ngIf="isControlHasError('nomeOriginal', 'required')" class="invalid-feedback">
+                <p>{{ "MSG000073.descricao" | translate }}</p>
+              </div>
+              <div *ngIf="isControlHasError('nomeOriginal', 'error')" class="invalid-feedback">
+                <p>{{msgsError['nomeOriginal']}}</p>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <label>{{ "MSG000236.descricao" | translate }}:</label>
+              <ngx-select formControlName="tipo" [items]="tipoList" [disabled]="true" [allowClear]="true"
+              [placeholder]="'MSG000236.descricao' | translate">
+            </ngx-select>
+              <div *ngIf="isControlHasError('tipo', 'required')" class="invalid-feedback">
+                <p>{{ "MSG000073.descricao" | translate }}</p>
+              </div>
+              <div *ngIf="isControlHasError('tipo', 'error')" class="invalid-feedback">
+                <p>{{msgsError['tipo']}}</p>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <label>{{ "MSG000235.descricao" | translate }}:</label>
+              <input type="text" disabled class="form-control" maxlength=100
+                [ngClass]="{'is-invalid': isControlInvalid('caminho')}" formControlName="caminho"
+                [placeholder]="'MSG000235.descricao' | translate" autocomplete="off">
+              <div *ngIf="isControlHasError('caminho', 'required')" class="invalid-feedback">
+                <p>{{ "MSG000073.descricao" | translate }}</p>
+              </div>
+              <div *ngIf="isControlHasError('caminho', 'error')" class="invalid-feedback">
+                <p>{{msgsError['caminho']}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-lg-3">
+              <label>{{ "MSG000017.descricao" | translate }}:</label>
+              <input type="text" disabled class="form-control" maxlength=100
+                [ngClass]="{'is-invalid': isControlInvalid('nome')}" formControlName="nome"
+                [placeholder]="'MSG000017.descricao' | translate" autocomplete="off">
+              <div *ngIf="isControlHasError('nome', 'required')" class="invalid-feedback">
+                <p>{{ "MSG000073.descricao" | translate }}</p>
+              </div>
+              <div *ngIf="isControlHasError('nome', 'error')" class="invalid-feedback">
+                <p>{{msgsError['nome']}}</p>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <label>{{ "MSG000237.descricao" | translate }}:</label>
+              <input type="text" disabled class="form-control" maxlength=100
+                [ngClass]="{'is-invalid': isControlInvalid('extensao')}" formControlName="extensao"
+                [placeholder]="'MSG000237.descricao' | translate" autocomplete="off">
+              <div *ngIf="isControlHasError('extensao', 'required')" class="invalid-feedback">
+                <p>{{ "MSG000073.descricao" | translate }}</p>
+              </div>
+              <div *ngIf="isControlHasError('extensao', 'error')" class="invalid-feedback">
+                <p>{{msgsError['extensao']}}</p>
+              </div>
+            </div>
+          </div>
+          <app-form *ngIf=registroAtual [model]=registroAtual></app-form>
+        </div>
+        <!-- <div class="card-footer bg-gray-100">
+          <button type="reset" id="kt_reset" [attr.title]="'MSG000014.descricao' | translate"
+            class="btn btn-secondary btn-secondary--icon" (click)=cancelar()><span>
+              <i class="la la-close"></i>
+              <span>{{ "MSG000014.descricao" | translate }}</span>
+            </span></button>
+        </div> -->
+      </form>
+
+    </app-card>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+<div class="row">
+  <div class="col-md-12">
+    <!--begin::Card-->
+    <!-- <div class="card card-custom gutter-b example example-compact">
+      <div class="card-header">
+        <h3 class="card-title">Novo Template</h3>
+      </div> -->
+      <app-card>
+      <!--begin::Form-->
+      <form class="form" novalidate="novalidate" [formGroup]="form" (ngSubmit)="salvar()" (keydown.enter)="salvar(); (false)">
+        <div class="card-body">
+          <div class="form-group row">
+            <div class="col-lg-3">
+              <label>{{ "MSG000017.descricao" | translate }}:</label>
+              <input type="text" class="form-control" maxlength=100 [ngClass]="{'is-invalid': isControlInvalid('nome')}" formControlName="nome"
+              [placeholder]="'MSG000017.descricao' | translate" autocomplete="off">
+              <div *ngIf="isControlHasError('nome', 'required')" class="invalid-feedback">
+                <p>{{ "MSG000073.descricao" | translate }}</p>
+              </div>
+              <div *ngIf="isControlHasError('nome', 'error')" class="invalid-feedback">
+                <p>{{msgsError['nome']}}</p>
+              </div>
+            </div>
+            <div class="col-lg-3" *ngIf="id">
+              <label>{{ "MSG000158.descricao" | translate }}:</label>
+              <input type="text" class="form-control" formControlName="token"
+              [placeholder]="'MSG000158.descricao' | translate" autocomplete="off" disabled>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-lg-12">
+              <label>{{ "MSG000184.descricao" | translate }}:</label>
+              <angular-editor formControlName="conteudo" 
+              [placeholder]="'MSG000017.descricao' | translate" autocomplete="off" ></angular-editor>
+              <div *ngIf="isControlHasError('conteudo', 'required')" class="invalid-feedback">
+                <p>{{ "MSG000073.descricao" | translate }}</p>
+              </div>
+              <div *ngIf="isControlHasError('conteudo', 'error')" class="invalid-feedback">
+                <p>{{msgsError['conteudo']}}</p>
+              </div>
+            </div>
+          </div>
+          <app-form *ngIf=registroAtual [model]=registroAtual></app-form>
+        </div>
+        <div class="card-footer bg-gray-100">
+          <button type="reset" id="kt_reset" [attr.title]="'MSG000014.descricao' | translate" class="btn btn-secondary btn-secondary--icon" (click)=cancelar()><span>
+            <i class="la la-close"></i>
+            <span>{{ "MSG000014.descricao" | translate }}</span>
+        </span></button>
+        </div>
+      </form>
+    </app-card>
+  </div>
